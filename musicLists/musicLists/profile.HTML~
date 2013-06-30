@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<link rel="stylesheet" type="text/css" href="profile.CSS">
+</head>
+<body>
+<h1 id="header">Taste-profile</h1>
+<p><img src="index2.jpeg" alt="profilepic"/></p>
+<table border="1">
+<tr>
+<td> name:(The name of the user)</td>
+</tr>
+<tr>
+<td> birthday:</td>
+</tr>
+<tr>
+<td>number of songs</td>
+</tr>
+</table>
+</body>
+</html>

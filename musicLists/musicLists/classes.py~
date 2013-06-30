@@ -15,8 +15,7 @@ class user(models.Model):
 class song(models.Model):
     songname=CharField(max_length=1000)
     artist=ForeignKey('artist')
-    genre=ForeignKey('genre')
-
+    genre=
 
 
 
