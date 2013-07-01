@@ -1,0 +1,6 @@
+# Create your views here.
+from django.shortcuts import render
+
+def showSignUp(request):
+	context = {}
+    	return render(request, 'templates/music/signup.html', context)
