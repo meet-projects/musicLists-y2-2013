@@ -7,13 +7,11 @@
 	<body background="{{ STATIC_URL }}images/images2.jpeg"> 
 	<center>
 	<h1> ~ Taste ~ </h2>
-	<div id = login>	
 	<form>
 	Username : <input type = "text" name = "firstname"><br>
 	Password :   <input type = "password" name = "pwd"><br>
 	<input type = "submit" value = "Log In">
 	</form>
-	</div>
 	</center>
 	</body>
 </html>

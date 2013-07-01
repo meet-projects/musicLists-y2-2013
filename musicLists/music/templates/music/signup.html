@@ -1,4 +1,8 @@
 <html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/signup.css" />
+	</head>
+		<h1><center>This text will be center-aligned.</center>Taste</h1>
     <body>
     	<div id="signup">
 		<form>
@@ -6,9 +10,19 @@
     			<br>
         		<input type="password" name="user[password]" placeholder="Password" id="signup_password" data-required="required"/>
     			<br>
-        		<input type="text" name="tumblelog[name]" class="signup_username" placeholder="Username" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/>
-    			<br>
-        		<input type="submit" value= "sign up and start"/>
+<input type="text" name="tumblelog[name]" class="signup_username" placeholder="Username" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br>
+			<input type="radio" name="sex" value="male">Male<br>
+			<input type="radio" name="sex" value="female">Female<br>
+			<select>
+  				<option value="Day"></option>
+			</select>
+ 			<select>
+				<option value="Month">Saab</option>
+  			</select>
+			<select>
+				<option value="Year">Opel</option>
+			</select>
+  				
         	</form>
  	</div>
 	<div id= login>
