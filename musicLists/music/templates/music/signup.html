@@ -5,12 +5,15 @@
 		<h1><center>This text will be center-aligned.</center>Taste</h1>
     <body>
     	<div id="signup">
-		<form>
+		<form action="submitsignup" method="post">
+{% csrf_token %}
         		<input type="email" name="user[email]" placeholder="Email" id="signup_email" data-required="required"/>
     			<br>
         		<input type="password" name="user[password]" placeholder="Password" id="signup_password" data-required="required"/>
     			<br>
 <input type="text" name="tumblelog[name]" class="signup_username" placeholder="Username" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br>
+<input type="text" name="firstname" class="signup_username" placeholder="First Name" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br>
+<input type="text" name="lastname" class="signup_username" placeholder="Last Name" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br>
 			<input type="radio" name="sex" value="male">Male<br>
 			<input type="radio" name="sex" value="female">Female<br>
 			<select>
@@ -22,11 +25,14 @@
 			<select>
 				<option value="Year">Opel</option>
 			</select>
+<br>
+<input type="submit" value="Sign Up"/>
   				
         	</form>
  	</div>
 	<div id= login>
-		<form>
+		<form action="submitlogin" method="post">
+{% csrf_token %}
 			<input type="email" name="user[email]" placeholder="Email" id="signup_email" data-required="required">
 			<br>
 			<input type="password" name="user[password]" placeholder="Password" id="signup_password" data-required="required">
