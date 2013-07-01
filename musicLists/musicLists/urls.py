@@ -6,11 +6,10 @@ from music import views
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^haitham/$', views.haitham),
     # Examples:
-     url(r'^signUp/$', 'music.views.showSignUp', name='signup'),
-url(r'^loginsubmit/$',music.views.submitlogin,)
-url(r'^signupsubmit/$',music.views.signup,)
+     url(r'^signUp/$', views.showSignUp),
+url(r'^loginsubmit/$',views.submitlogin),
+url(r'^signUp/submitsignup/$',views.signup)
     # url(r'^musicLists/', include('musicLists.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

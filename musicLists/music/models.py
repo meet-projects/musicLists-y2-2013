@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 
 class Genre(models.Model):
     name=models.CharField(max_length=200)
+    def __unicode__(self):
+	return self.name
    
 class Artist(models.Model):
     name=models.CharField(max_length=200)
@@ -11,8 +13,11 @@ class Artist(models.Model):
         return self.name
 
 class Album(models.Model):
+    name=models.CharField(max_length=200)
     artist=models.ForeignKey('Artist')
     genres=models.ManyToManyField('Genre')
+    def __unicode__(self):
+	return self.name
 
 class Song(models.Model):
     name=models.CharField(max_length=200)

@@ -1,5 +1,7 @@
 # Create your views here.
+from django.http import HttpResponse
 from django.shortcuts import render
+from django.contrib.auth.models import User
 
 def showSignUp(request):
 	context = {}
@@ -14,5 +16,8 @@ def signup(request):
 	UserName=request.POST["tumblelog[name]"]
 	FirstName=request.POST["firstname"]
 	LastName=request.POST["lastname"]
-	newser=Guy(
+	newser = User.objects.create_user(username=UserName, email=Email, password=Password, first_name=FirstName, last_name=LastName)
+	return HttpResponse("working, account created")
+
+
 	

@@ -4,7 +4,7 @@
 	</head>
     <body background="{{ STATIC_URL }}images/logo.png">
     	<div id="signup">
-		<form action="submitsignup" method="post">
+		<form action="submitsignup/" method="post">
 {% csrf_token %}
         		<input type="email" name="user[email]" placeholder="Email" id="signup_email" data-required="required"/>
     			<br>
@@ -66,8 +66,7 @@
 				<option value="30">30</option>
 				<option value="31">31</option>
 			</select>
-<br>
-<input type="submit" value="Sign Up"/>
+
   				
 			<select>
 				<option value="Year">Year</option>
@@ -110,7 +109,7 @@
         	</form>
  	</div>
 	<div id= login>
-		<form action="submitlogin" method="post">
+		<form action="submitlogin/" method="post">
 {% csrf_token %}
 			<input type="email" name="user[email]" placeholder="Email" id="signup_email" data-required="required">
 			<br>
