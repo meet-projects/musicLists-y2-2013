@@ -6,6 +6,7 @@ from music import views
 # admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^haitham/$', views.haitham),
     # Examples:
      url(r'^signUp/$', views.showSignUp),
     # url(r'^musicLists/', include('musicLists.foo.urls')),

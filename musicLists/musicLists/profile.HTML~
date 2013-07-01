@@ -3,10 +3,10 @@
  <head>
 <link rel="stylesheet" type="text/css" href="profile.CSS">
 </head>
-<body>
+<body id='dez'>
 <h1 id="header">Taste-profile</h1>
-<p><img src="index2.jpeg" alt="profilepic"/></p>
-<table border="1">
+<p><img src="images.jpeg" alt="profilepic"/></p>
+<table border="1" id="tex">
 <tr>
 <td> name:(The name of the user)</td>
 </tr>

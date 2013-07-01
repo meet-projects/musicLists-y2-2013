@@ -7,7 +7,11 @@ from music import views
 
 urlpatterns = patterns('',
     # Examples:
+<<<<<<< HEAD
      url(r'^signUp/$', views.showSignUp),
+=======
+    # url(r'^$', 'musicLists.views.home', name='home'),
+>>>>>>> 887c7e95e160f7be7941bad5b42cdae8f250744a
     # url(r'^musicLists/', include('musicLists.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
