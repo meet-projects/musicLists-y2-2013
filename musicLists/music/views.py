@@ -9,7 +9,7 @@ def showSignUp(request):
 def submitlogin(request):
         UserName=request.POST['username']
 	Password=request.POST['password']
-	return HttpResponseRedirect('profile')
+	return HttpResponseRedirect('music/profile.HTML')
 def signup(request):
 	Email=request.POST["user[email]"]
 	Password=request.POST["user[password]"]
