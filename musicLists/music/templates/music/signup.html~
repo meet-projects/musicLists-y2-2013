@@ -2,8 +2,9 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/signup.css" />
 	</head>
-    <body background="{{ STATIC_URL }}images/rsz_logo.jpg">
+    <body background="{{ STATIC_URL }}images/rsz_1logo.jpg">
     	<div id="signup">
+	<p id = "signUp">Sign up</p>
 		<form action="submitsignup/" method="post">
 {% csrf_token %}
         		<input type="email" name="user[email]" placeholder="Email" id="signup_email" data-required="required"/>
@@ -106,7 +107,8 @@
 			<input type="submit" value="Sign Up and Start"/>	
         	</form>
  	</div>
-	<div id= login>
+	<div id= "login">
+	<p1 id="Log in">Log in</p1>
 		<form action="submitlogin/" method="post">
 {% csrf_token %}
 			<input type="email" name="user[email]" placeholder="Email" id="signup_email" data-required="required">

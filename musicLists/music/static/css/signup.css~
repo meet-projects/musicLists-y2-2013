@@ -1,16 +1,20 @@
-body
-{
-background-image:url('logo1.jpg');
-}
 
-img {
-    max-width: 100%;
-    height: auto;
-    width: auto\9;
-}
 
 div#signup
 {
-    float:right;
+	float:right;
 }
+input{
+	border-radius: 5px;
+}
+
+p#signUp
+	{
+	font-weight:bold;color:black;
+	}
+
+p1#Login{
+	font-weight:bold;color:black;
+	}
+
 
