@@ -2,7 +2,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/signup.css" />
 	</head>
-    <body background="{{ STATIC_URL }}images/logo.png">
+    <body background="{{ STATIC_URL }}images/logo.jpg">
     	<div id="signup">
 		<form action="submitsignup/" method="post">
 {% csrf_token %}
