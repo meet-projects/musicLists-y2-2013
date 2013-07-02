@@ -1,5 +1,5 @@
 # Create your views here.
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
@@ -9,7 +9,7 @@ def showSignUp(request):
     	return render(request, 'music/signup.html', context)
 def profile(request):
 	context = {}
-    	return render(request, 'music/profile.html', context)
+    	return render(request, 'music/profile.HTML', context)
 def submitlogin(request):
         UserName=request.POST['username']
 	Password=request.POST['password']
@@ -26,4 +26,4 @@ def signup(request):
 	FirstName=request.POST["firstname"]
 	LastName=request.POST["lastname"]
 	newser = User.objects.create_user(username=UserName, email=Email, password=Password, first_name=FirstName, last_name=LastName) 
-	return render('profile')
+	return HttpResponseRedirect('/profile')
