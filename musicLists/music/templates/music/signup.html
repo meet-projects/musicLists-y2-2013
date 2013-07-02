@@ -2,9 +2,9 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/signup.css" />
 	</head>
-    <body background="{{ STATIC_URL }}images/logo.jpg">
+    <body background="{{ STATIC_URL }}images/rsz_1logo.jpg">
     	<div id="signup">
-		<form action="submitsignup/" method="post">
+		<form action="/submitsignup/" method="post">
 {% csrf_token %}
         		<input type="email" name="user[email]" placeholder="Email" id="signup_email" data-required="required"/>
     			<br>
@@ -65,9 +65,7 @@
 				<option value="29">29</option>
 				<option value="30">30</option>
 				<option value="31">31</option>
-			</select>
-
-  				
+			</select>			
 			<select>
 				<option value="Year">Year</option>
 				<option value="1980">1980</option>
@@ -86,7 +84,7 @@
 				<option value="1993">1993</option>
 				<option value="1994">1994</option>
 				<option value="1995">1995</option>
-				<option value="1996">1996</option>
+				<option value="dfgsdfgsdf1996">1996</option>
 				<option value="1997">1997</option>
 				<option value="1998">1998</option>
 				<option value="1999">1999</option>
@@ -109,11 +107,11 @@
         	</form>
  	</div>
 	<div id= login>
-		<form action="submitlogin/" method="post">
+		<form action="/loginsubmit/" method="post">
 {% csrf_token %}
-			<input type="email" name="user[email]" placeholder="Email" id="signup_email" data-required="required">
+			<input type="text" name="username" placeholder="User Name" id="signup_email" data-required="required">
 			<br>
-			<input type="password" name="user[password]" placeholder="Password" id="signup_password" data-required="required">
+			<input type="password" name="password" placeholder="Password" id="signup_password" data-required="required">
 			<br>
     			<input type="submit" value="Log in"/>
 		</form>
