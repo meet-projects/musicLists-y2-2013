@@ -13,12 +13,16 @@ def profile(request):
 def submitlogin(request):
         UserName=request.POST['username']
 	Password=request.POST['password']
+<<<<<<< HEAD
+	return HttpResponseRedirect('music/profile.HTML')
+=======
 	user=authenticate(username=UserName, password=Password)
 	if user is not None:
 		if user.is_active:
 			login(request,user)
 			return HttpResponseRedirect('profile')
 	return HttpResponseRedirect('signup')
+>>>>>>> f42defa0ce04273862557bf8723f1e214cd8f496
 def signup(request):
 	Email=request.POST["user[email]"]
 	Password=request.POST["user[password]"]
