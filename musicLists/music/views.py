@@ -16,8 +16,5 @@ def signup(request):
 	UserName=request.POST["tumblelog[name]"]
 	FirstName=request.POST["firstname"]
 	LastName=request.POST["lastname"]
-	newser = User.objects.create_user(username=UserName, email=Email, password=Password, first_name=FirstName, last_name=LastName)
-	return HttpResponse("working, account created")
-
-
-	
+	newser = User.objects.create_user(username=UserName, email=Email, password=Password, first_name=FirstName, last_name=LastName) 
+	return HttpResponse("Awesome! you create "+ newser.username+", now you have "+ str([a.username for a in User.objects.all()]))
