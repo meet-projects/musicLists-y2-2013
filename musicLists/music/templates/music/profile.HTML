@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
  <head>
-<link rel="stylesheet" type="text/css" href="profile.CSS">
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/profile.css">
 </head>
 <body class='dez'>
-<h1 id="header">Taste-profile</h1>
-<p><img src="images.jpeg" alt="profilepic"/></p>
-<table border="1" id="tex">
+<h1>Profile</h1>
+<img src="{{STATIC_URL}}images/images.jpeg" width="130" height="150"  alt="profilepic"/>
+<table id = "profile" border="1" >
 <tr>
-<td> name: Haitham Slaibi</td>
+<td> name: {{user.first_name}}</td>
 </tr>
 <tr>
 <td> birthday: 13/05/1997</td>
 </tr>
 </table><br><br>
-number of songs: 
+favourite songs: 
 <ul id = 'list'>
-	<li>       woop woop! </li>
+	<li>       smack that </li>
+
 </ul> 
 
 
