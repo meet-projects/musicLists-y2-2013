@@ -20,6 +20,7 @@ def homepage(request):
 def profile(request):
 	context = {'user': request.user}
     	return render(request, 'music/profile.html', context)
+
 def submitlogin(request):
         UserName=request.POST['username']
 	Password=request.POST['password']
@@ -30,6 +31,7 @@ def submitlogin(request):
 			return HttpResponseRedirect('/homepage')
         request.user.guy
 	return HttpResponseRedirect('/signUp')
+
 def signup(request):
 	Email=request.POST["email"]
 	Password=request.POST["password"]
@@ -42,5 +44,5 @@ def signup(request):
 
 def logout(request):
 	logout(request)
-	#redirect
+	return HttpResponseRedirect('/signUp')
 

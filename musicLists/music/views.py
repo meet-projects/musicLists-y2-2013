@@ -28,8 +28,12 @@ def submitlogin(request):
 	if user is not None:
 		if user.is_active:
 			login(request,user)
+<<<<<<< HEAD
+			return HttpResponseRedirect('/profile')
+=======
 			return HttpResponseRedirect('/homepage')
         request.user.guy
+>>>>>>> c1600e42730ad63c5038322b6a85a7f590d67cdd
 	return HttpResponseRedirect('/signUp')
 
 def signup(request):
@@ -39,14 +43,10 @@ def signup(request):
 	FirstName=request.POST["firstname"]
 	LastName=request.POST["lastname"]
 	newser = User.objects.create_user(username=UserName, email=Email, password=Password, first_name=FirstName, last_name=LastName)
-<<<<<<< HEAD
-	
-=======
 	guy = Guy.make_default(newser)
->>>>>>> 9a6dccba1c9efe2436b1e06feb53298dc4970758
 	return HttpResponseRedirect('/profile')
 
 def logout(request):
 	logout(request)
-	#redirect
+	return HttpResponseRedirect('/signUp')
 
