@@ -2,11 +2,14 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/signup.css" />
 	</head>
+<<<<<<< HEAD
 
     <body background="{{ STATIC_URL }}images/rsz_1logo.jpg">
     	<div id="SignUp">
 		<id="signUp"/>Sign Up<br>
 
+=======
+>>>>>>> b08d45ef1a8e4e34da6a5166eb9ad5b78215a90d
     <body>
 	<div id="bg">
   	<img src="rsz_1logo.jpg" alt="">
