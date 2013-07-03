@@ -15,6 +15,6 @@ p#signUp
 
 p1#Login{
 	font-weight:bold;color:black;
-	}
+	}<br>
 
 

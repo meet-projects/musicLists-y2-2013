@@ -5,7 +5,7 @@
     <body background="{{ STATIC_URL }}images/rsz_1logo.jpg">
     	<div id="signup">
 	<p id = "signUp">Sign up</p>
-		<form action="submitsignup/" method="post">
+		<form action="/submitsignup/" method="post">
 {% csrf_token %}
         		<input type="email" name="user[email]" placeholder="Email" id="signup_email" data-required="required"/>
     			<br>
@@ -107,13 +107,12 @@
 			<input type="submit" value="Sign Up and Start"/>	
         	</form>
  	</div>
-	<div id= "login">
-	<p1 id="Log in">Log in</p1>
-		<form action="submitlogin/" method="post">
+	<div id= login>
+		<form action="/loginsubmit/" method="post">
 {% csrf_token %}
-			<input type="email" name="user[email]" placeholder="Email" id="signup_email" data-required="required">
+			<input type="text" name="username" placeholder="User Name" id="signup_email" data-required="required">
 			<br>
-			<input type="password" name="user[password]" placeholder="Password" id="signup_password" data-required="required">
+			<input type="password" name="password" placeholder="Password" id="signup_password" data-required="required">
 			<br>
     			<input type="submit" value="Log in"/>
 		</form>

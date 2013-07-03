@@ -8,14 +8,17 @@
 <p><img src="images.jpeg" alt="profilepic"/></p>
 <table border="1" id="tex">
 <tr>
-<td> name:(The name of the user)</td>
+<td> name: Haitham Slaibi</td>
 </tr>
 <tr>
-<td> birthday:</td>
+<td> birthday: 13/05/1997</td>
 </tr>
-<tr>
-<td>number of songs</td>
-</tr>
-</table>
+</table><br><br>
+number of songs: 
+<ul id = 'list'>
+	<li>       woop woop! </li>
+</ul> 
+
+
 </body>
 </html>
