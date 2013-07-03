@@ -2,18 +2,27 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/signup.css" />
 	</head>
+<<<<<<< HEAD
     <body background="{{ STATIC_URL }}images/rsz_1logo.jpg">
     	<div id="SignUp">
 		<id="signUp"/>Sign Up<br>
+=======
+    <body>
+	<div id="bg">
+  	<img src="rsz_1logo.jpg" alt="">
+	</div>
+    	<div id="signup">
+	<p id = "signUp">Sign up</p>
+>>>>>>> 6a335cd56b4e0c78552190fcdf3bc4b66a5a40a8
 		<form action="/submitsignup/" method="post">
-{% csrf_token %}
+		{% csrf_token %}
         		<input type="email" name="user[email]" placeholder="Email" id="signup_email" data-required="required"/>
     			<br>
         		<input type="password" name="user[password]" placeholder="Password" id="signup_password" data-required="required"/>
     			<br>
-<input type="text" name="tumblelog[name]" class="signup_username" placeholder="Username" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br>
-<input type="text" name="firstname" class="signup_username" placeholder="First Name" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br>
-<input type="text" name="lastname" class="signup_username" placeholder="Last Name" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br>
+			<input type="text" name="tumblelog[name]" class="signup_username" placeholder="Username" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br>
+			<input type="text" name="firstname" class="signup_username" placeholder="First Name" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br>
+			<input type="text" name="lastname" class="signup_username" placeholder="Last Name" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br>
 			<input type="radio" name="sex" value="male">Male<br>
 			<input type="radio" name="sex" value="female">Female<br>
 		
@@ -85,7 +94,7 @@
 				<option value="1993">1993</option>
 				<option value="1994">1994</option>
 				<option value="1995">1995</option>
-				<option value="dfgsdfgsdf1996">1996</option>
+				<option value="1996">1996</option>
 				<option value="1997">1997</option>
 				<option value="1998">1998</option>
 				<option value="1999">1999</option>
@@ -107,6 +116,7 @@
 			<input type="submit" value="Sign Up and Start"/>	
         	</form>
  	</div>
+	<p id = "logIn">Log in</p>
 	<div id= login>
 		<form action="/loginsubmit/" method="post">
 {% csrf_token %}
