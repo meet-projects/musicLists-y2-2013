@@ -2,7 +2,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/signup.css" />
 	</head>
-    <body background="{{ STATIC_URL }}images/rsz_1logo.jpg">
+    <body>
 	<div id="bg">
   	<img src="rsz_1logo.jpg" alt="">
 	</div>
@@ -110,7 +110,7 @@
 			<input type="submit" value="Sign Up and Start"/>	
         	</form>
  	</div>
-	<p id = "logIn">Log in</p>
+	<p id = "login">Log in</p>
 	<div id= login>
 		<form action="/loginsubmit/" method="post">
 {% csrf_token %}
