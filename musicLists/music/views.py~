@@ -29,7 +29,6 @@ def submitlogin(request):
 		if user.is_active:
 			login(request,user)
 			return HttpResponseRedirect('/homepage')
-        request.user.guy
 	return HttpResponseRedirect('/signUp')
 
 def signup(request):
