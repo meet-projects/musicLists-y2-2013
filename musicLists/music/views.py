@@ -9,9 +9,12 @@ from models import Artist, Song, Guy, Genre, Album
 def showSignUp(request):
 	context = {}
     	return render(request, 'music/signup.html', context)
-def profile(request):
+def homepage(request):
 	context = {}
-    	return render(request, 'music/profile.HTML', context)
+    	return render(request, 'music/homepage.html', context)
+def profile(request):
+	context = {'user': request.user}
+    	return render(request, 'music/profile.html', context)
 def submitlogin(request):
         UserName=request.POST['username']
 	Password=request.POST['password']

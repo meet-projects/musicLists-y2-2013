@@ -9,9 +9,12 @@ from models import Artist, Song, Guy, Genre, Album
 def showSignUp(request):
 	context = {}
     	return render(request, 'music/signup.html', context)
+def homepage(request):
+	context = {}
+    	return render(request, 'music/homepage.html', context)
 def profile(request):
 	context = {}
-    	return render(request, 'music/profile.HTML', context)
+    	return render(request, 'music/profile.html', context)
 def submitlogin(request):
         UserName=request.POST['username']
 	Password=request.POST['password']
@@ -19,7 +22,7 @@ def submitlogin(request):
 	if user is not None:
 		if user.is_active:
 			login(request,user)
-			return HttpResponseRedirect('/profile')
+			return HttpResponseRedirect('/homepage')
         request.user.guy
 	return HttpResponseRedirect('/signUp')
 def signup(request):
