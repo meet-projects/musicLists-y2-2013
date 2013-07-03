@@ -10,8 +10,10 @@ def showSignUp(request):
 	context = {}
     	return render(request, 'music/signup.html', context)
 def profile(request):
+        user = request.user
+        print user
 	context = {}
-    	return render(request, 'music/profile.HTML', context)
+    	return render(request, 'music/profile.html', context)
 def submitlogin(request):
         UserName=request.POST['username']
 	Password=request.POST['password']
@@ -27,6 +29,7 @@ def signup(request):
 	UserName=request.POST["tumblelog[name]"]
 	FirstName=request.POST["firstname"]
 	LastName=request.POST["lastname"]
-	newser = User.objects.create_user(username=UserName, email=Email, password=Password, first_name=FirstName, last_name=LastName) 
+	newser = User.objects.create_user(username=UserName, email=Email, password=Password, first_name=FirstName, last_name=LastName)
+	
 	return HttpResponseRedirect('/profile')
 
