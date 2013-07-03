@@ -1,0 +1,13 @@
+<html>
+	<head>
+	<title>{% thing%} {%endthing%} </title>
+	{%hi%}
+	{% endthing%}
+	</head>
+	<body>
+	hi
+	{%block content%}
+	hey
+	{%block content %}
+	</body>
+</html>
