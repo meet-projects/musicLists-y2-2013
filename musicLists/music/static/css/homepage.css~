@@ -1,0 +1,14 @@
+span#h1
+{
+	float:right;
+	
+}
+
+body#background {
+
+background: url(../images/rsz_1logo.jpg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}

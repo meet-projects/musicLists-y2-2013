@@ -1,27 +1,23 @@
-/*#bg {
-  position: fixed; 
-  top: -50%; 
-  left: -50%; 
-  width: 200%; 
-  height: 200%;
-}
-#bg img {
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
-  margin: auto; 
-  min-width: 50%;
-  min-height: 50%;
-}*/
 
-div#signup
+div#signUp
 {
 	float:right;
 }
+
+div#logIn
+{
+	float: left;
+}
 input{
 	border-radius: 5px;
+}
+
+
+div#SignUp
+{
+	color:black;
+	font-weight:bold
+	
 }
 
 p#signUp
@@ -29,7 +25,7 @@ p#signUp
 	font-weight:bold;color:black;
 	}
 
-p1#Login{
+p1#login{
 	font-weight:bold;color:black;
 	}
 
@@ -41,3 +37,4 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+
