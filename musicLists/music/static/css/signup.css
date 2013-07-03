@@ -1,13 +1,18 @@
 
-div#signup
+div#signUp
 {
 	float:right;
+}
+
+div#logIn
+{
+	float: left;
 }
 input{
 	border-radius: 5px;
 }
 
-<<<<<<< HEAD
+
 div#SignUp
 {
 	color:black;
@@ -15,14 +20,12 @@ div#SignUp
 	
 }
 
-
-=======
 p#signUp
 	{
 	font-weight:bold;color:black;
 	}
 
-p1#Login{
+p1#login{
 	font-weight:bold;color:black;
 	}
 
@@ -34,4 +37,4 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
->>>>>>> 6a335cd56b4e0c78552190fcdf3bc4b66a5a40a8
+
