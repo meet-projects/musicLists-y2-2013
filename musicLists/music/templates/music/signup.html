@@ -5,22 +5,20 @@
 
     <body background="{{ STATIC_URL }}images/rsz_1logo.jpg">
     	<div id="SignUp">
-		<id="signUp"/>Sign Up<br>
-
     <body>
 	<div id="bg">
   	<img src="rsz_1logo.jpg" alt="">
 	</div>
-    	<div id="signup">
+    	<div id="signUp">
 	<p id = "signUp">Sign up</p>
 
 		<form action="/submitsignup/" method="post">
 		{% csrf_token %}
-        		<input type="email" name="email" placeholder="Email" id="signup_email" data-required="required"/>
+        		<input type="email" name="user[email]" placeholder="Email" id="signup_email" data-required="required"/>
     			<br>
-        		<input type="password" name="password" placeholder="Password" id="signup_password" data-required="required"/>
+        		<input type="password" name="user[password]" placeholder="Password" id="signup_password" data-required="required"/>
     			<br>
-			<input type="text" name="name" class="signup_username" placeholder="Username" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br>
+			<input type="text" name="tumblelog[name]" class="signup_username" placeholder="Username" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br>
 			<input type="text" name="firstname" class="signup_username" placeholder="First Name" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br>
 			<input type="text" name="lastname" class="signup_username" placeholder="Last Name" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br>
 			<input type="radio" name="sex" value="male">Male<br>
@@ -136,8 +134,8 @@
 			<input type="submit" value="Sign Up and Start"/>	
         	</form>
  	</div>
-	<p id = "login">Log in</p>
-	<div id= login>
+	<p id = "logIn">Log in</p>
+	<div id= logIn>
 		<form action="/loginsubmit/" method="post">
 {% csrf_token %}
 			<input type="text" name="username" placeholder="User Name" id="signup_email" data-required="required">
@@ -150,5 +148,4 @@
     </body>
 	
 	<span>
-<input type="submit" name="About us"/>
 </html>
