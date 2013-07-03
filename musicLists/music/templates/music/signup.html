@@ -2,12 +2,18 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/signup.css" />
 	</head>
+<<<<<<< HEAD
+    <body background="{{ STATIC_URL }}images/rsz_1logo.jpg">
+    	<div id="SignUp">
+		<id="signUp"/>Sign Up<br>
+=======
     <body>
 	<div id="bg">
   	<img src="rsz_1logo.jpg" alt="">
 	</div>
     	<div id="signup">
 	<p id = "signUp">Sign up</p>
+>>>>>>> 6a335cd56b4e0c78552190fcdf3bc4b66a5a40a8
 		<form action="/submitsignup/" method="post">
 		{% csrf_token %}
         		<input type="email" name="email" placeholder="Email" id="signup_email" data-required="required"/>
@@ -122,4 +128,7 @@
 		</form>
     	</div>
     </body>
+	
+	<span>
+<input type="submit" name="About us"/>
 </html>
