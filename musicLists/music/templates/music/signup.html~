@@ -9,7 +9,6 @@
 	<div id="bg">
   	<img src="rsz_1logo.jpg" alt="">
 	</div>
-    	<div id="signup">
 	<p id = "signUp">Sign up</p>
 
 		<form action="/submitsignup/" method="post">
@@ -134,8 +133,8 @@
 			<input type="submit" value="Sign Up and Start"/>	
         	</form>
  	</div>
-	<p id = "login">Log in</p>
-	<div id= login>
+	<p id = "logIn">Log in</p>
+	<div id= logIn>
 		<form action="/loginsubmit/" method="post">
 {% csrf_token %}
 			<input type="text" name="username" placeholder="User Name" id="signup_email" data-required="required">
