@@ -52,11 +52,15 @@ def signup(request):
 	return HttpResponseRedirect('/profile')
 
 <<<<<<< HEAD
+def logout_user(request):
+=======
+<<<<<<< HEAD
 def addsong(request):
 	songname = request.POST['songname']
 	return HttpResponseRedirect('/profile')
 =======
 def logout(request):
+>>>>>>> c152ec985effcf58734f32862ebd00b1d5b7eeb9
 	logout(request)
 	return HttpResponseRedirect('/signUp')
 
