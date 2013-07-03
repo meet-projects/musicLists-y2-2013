@@ -20,13 +20,15 @@ def submitlogin(request):
 		if user.is_active:
 			login(request,user)
 			return HttpResponseRedirect('/profile')
+        request.user.guy
 	return HttpResponseRedirect('/signUp')
 def signup(request):
-	Email=request.POST["user[email]"]
-	Password=request.POST["user[password]"]
-	UserName=request.POST["tumblelog[name]"]
+	Email=request.POST["email"]
+	Password=request.POST["password"]
+	UserName=request.POST["name"]
 	FirstName=request.POST["firstname"]
 	LastName=request.POST["lastname"]
-	newser = User.objects.create_user(username=UserName, email=Email, password=Password, first_name=FirstName, last_name=LastName) 
+	newser = User.objects.create_user(username=UserName, email=Email, password=Password, first_name=FirstName, last_name=LastName)
+	guy = Guy.make_default(newser)
 	return HttpResponseRedirect('/profile')
 
