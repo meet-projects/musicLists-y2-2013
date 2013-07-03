@@ -19,7 +19,7 @@ def submitlogin(request):
 	if user is not None:
 		if user.is_active:
 			login(request,user)
-			return HttpResponseRedirect('/homepage')
+			return HttpResponseRedirect('/profile')
         request.user.guy
 	return HttpResponseRedirect('/signUp')
 def signup(request):
