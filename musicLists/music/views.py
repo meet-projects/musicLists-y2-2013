@@ -3,7 +3,9 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
+from models import Artist, Song, Guy, Genre, Album
 
+ 
 def showSignUp(request):
 	context = {}
     	return render(request, 'music/signup.html', context)
