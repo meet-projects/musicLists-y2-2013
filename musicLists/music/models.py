@@ -38,30 +38,9 @@ class Guy(models.Model):
 
     @staticmethod
     def make_default(user):
-        try:
-          genre = Genre.objects.filter(name='empty')[0]
-        except IndexError:
-          genre = Genre(name='empty')
-          genre.save()
-        try:
-          artist = Artist.objects.filter(name='empty')[0]
-        except IndexError:
-          artist = Artist(name='empty')
-          artist.save()
-        try:
-          song = Song.objects.filter(name='empty')[0]
-        except IndexError:
-          try:
-            album = Album.objects.filter(name='empty')[0]
-          except IndexError:
-            album = Album(name='empty', artist=artist)
-            album.save()
-            album.genres.add(genre)
-            
-          song = Song(name='empty', artist=artist, album=album, link='youtube.com')
-          song.save()
-          song.genres.add(genre)
-          song.save()
+        genre = Genre.objects.filter(name='empty')[0]
+        artist = Artist.objects.filter(name='empty')[0]
+        song = Song.objects.filter(name='empty')[0]
         guy = Guy(user=user)
         guy.save()
         guy.favsongs.add(song)
