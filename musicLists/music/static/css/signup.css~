@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+/*#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}*/
+>>>>>>> 6a335cd56b4e0c78552190fcdf3bc4b66a5a40a8
+>>>>>>> 2b04b1265e13f9d236d54058f74509418139473d
 
 div#signup
 {
@@ -7,6 +31,16 @@ input{
 	border-radius: 5px;
 }
 
+<<<<<<< HEAD
+div#SignUp
+{
+	color:black;
+	font-family:
+	
+}
+
+
+=======
 p#signUp
 	{
 	font-weight:bold;color:black;
@@ -24,3 +58,4 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+>>>>>>> 6a335cd56b4e0c78552190fcdf3bc4b66a5a40a8

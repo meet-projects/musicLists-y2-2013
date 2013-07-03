@@ -35,3 +35,16 @@ class Guy(models.Model):
     favgenres=models.ManyToManyField('Genre')
     def __unicode__(self):
         return self.user.username
+
+    @staticmethod
+    def make_default(user):
+        genre = Genre.objects.filter(name='empty')[0]
+        artist = Artist.objects.filter(name='empty')[0]
+        song = Song.objects.filter(name='empty')[0]
+        guy = Guy(user=user)
+        guy.save()
+        guy.favsongs.add(song)
+        guy.favartists.add(artist)
+        guy.favgenres.add(genre)
+        guy.save()
+        return guy

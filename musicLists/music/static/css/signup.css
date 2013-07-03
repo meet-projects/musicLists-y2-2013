@@ -7,6 +7,16 @@ input{
 	border-radius: 5px;
 }
 
+<<<<<<< HEAD
+div#SignUp
+{
+	color:black;
+	font-weight:bold
+	
+}
+
+
+=======
 p#signUp
 	{
 	font-weight:bold;color:black;
@@ -24,3 +34,4 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+>>>>>>> 6a335cd56b4e0c78552190fcdf3bc4b66a5a40a8
