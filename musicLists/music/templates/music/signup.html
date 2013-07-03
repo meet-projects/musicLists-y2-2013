@@ -3,7 +3,8 @@
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/signup.css" />
 	</head>
     <body background="{{ STATIC_URL }}images/rsz_1logo.jpg">
-    	<div id="signup">
+    	<div id="SignUp">
+		<id="signUp"/>Sign Up<br>
 		<form action="/submitsignup/" method="post">
 {% csrf_token %}
         		<input type="email" name="user[email]" placeholder="Email" id="signup_email" data-required="required"/>
@@ -117,4 +118,7 @@
 		</form>
     	</div>
     </body>
+	
+	<span>
+<input type="submit" name="About us"/>
 </html>
