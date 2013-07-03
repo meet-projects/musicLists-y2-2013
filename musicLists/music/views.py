@@ -28,12 +28,10 @@ def submitlogin(request):
 	if user is not None:
 		if user.is_active:
 			login(request,user)
-<<<<<<< HEAD
+
 			return HttpResponseRedirect('/profile')
-=======
 			return HttpResponseRedirect('/homepage')
-        request.user.guy
->>>>>>> c1600e42730ad63c5038322b6a85a7f590d67cdd
+
 	return HttpResponseRedirect('/signUp')
 
 def signup(request):
