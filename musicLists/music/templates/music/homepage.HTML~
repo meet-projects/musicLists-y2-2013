@@ -3,7 +3,7 @@
 <body>
 <form>
 <span>
-<img src="rsz_3rsz_1logo.jpg" alt="hi" width="2000" height="228">
+<img src="rsz_3rsz_1logo.jpg" alt="hi" width="1500" height="228">
 <br>
 		<input type="submit" value="Profile"/>
 		<input type="submit" value="friends"/>
