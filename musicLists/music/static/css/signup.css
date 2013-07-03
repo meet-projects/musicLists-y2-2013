@@ -1,7 +1,26 @@
 
-
 div#signup
 {
-    float:right;
+	float:right;
+}
+input{
+	border-radius: 5px;
 }
 
+p#signUp
+	{
+	font-weight:bold;color:black;
+	}
+
+p1#Login{
+	font-weight:bold;color:black;
+	}
+
+
+body { 
+  background: url(../images/rsz_1logo.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
