@@ -20,7 +20,6 @@ def submitlogin(request):
 		if user.is_active:
 			login(request,user)
 			return HttpResponseRedirect('/profile')
-        request.user.guy
 	return HttpResponseRedirect('/signUp')
 def signup(request):
 	Email=request.POST["email"]
