@@ -1,4 +1,4 @@
-#bg {
+/*#bg {
   position: fixed; 
   top: -50%; 
   left: -50%; 
@@ -14,7 +14,7 @@
   margin: auto; 
   min-width: 50%;
   min-height: 50%;
-}
+}*/
 
 div#signup
 {
@@ -34,3 +34,10 @@ p1#Login{
 	}
 
 
+body { 
+  background: url(../images/rsz_1logo.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
