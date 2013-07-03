@@ -13,6 +13,7 @@ urlpatterns = patterns('',
 	url(r'^profile/$',views.profile),
 	url(r'^profile/addsong$',views.addsong),
 	#url(r'^homepage/$', views.homepage),
+	url(r'^logout/$', views.logout_user),
     # url(r'^musicLists/', include('musicLists.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

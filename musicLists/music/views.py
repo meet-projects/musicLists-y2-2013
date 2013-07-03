@@ -2,18 +2,27 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from models import Artist, Song, Guy, Genre, Album
 
  
 def showSignUp(request):
 	context = {}
     	return render(request, 'music/signup.html', context)
+
+@login_required
+def homepage(request):
+	context = {}
+    	return render(request, 'music/homepage.html', context)
+
+@login_required
 def profile(request):
         user = request.user
         print user
 	context = {}
     	return render(request, 'music/profile.html', context)
+
 def submitlogin(request):
         UserName=request.POST['username']
 	Password=request.POST['password']
@@ -23,6 +32,7 @@ def submitlogin(request):
 			login(request,user)
 			return HttpResponseRedirect('/profile')
 	return HttpResponseRedirect('/signUp')
+
 def signup(request):
 	Email=request.POST["user[email]"]
 	Password=request.POST["user[password]"]
@@ -34,4 +44,9 @@ def signup(request):
 
 def addsong(request):
 	songname = request.POST['songname']
+	guy = Guy.make_default(newser)
 	return HttpResponseRedirect('/profile')
+
+def logout_user(request):
+	logout(request)
+	return HttpResponseRedirect('/signUp')
