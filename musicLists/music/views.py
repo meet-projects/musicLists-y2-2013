@@ -18,7 +18,9 @@ def homepage(request):
 
 @login_required
 def profile(request):
-	context = {'user': request.user}
+        user = request.user
+        print user
+	context = {}
     	return render(request, 'music/profile.html', context)
 
 def submitlogin(request):
@@ -28,21 +30,23 @@ def submitlogin(request):
 	if user is not None:
 		if user.is_active:
 			login(request,user)
-			return HttpResponseRedirect('/homepage')
-
+			return HttpResponseRedirect('/profile')
 	return HttpResponseRedirect('/signUp')
 
 def signup(request):
-	Email=request.POST["email"]
-	Password=request.POST["password"]
-	UserName=request.POST["name"]
+	Email=request.POST["user[email]"]
+	Password=request.POST["user[password]"]
+	UserName=request.POST["tumblelog[name]"]
 	FirstName=request.POST["firstname"]
 	LastName=request.POST["lastname"]
 	newser = User.objects.create_user(username=UserName, email=Email, password=Password, first_name=FirstName, last_name=LastName)
+	return HttpResponseRedirect('/profile')
+
+def addsong(request):
+	songname = request.POST['songname']
 	guy = Guy.make_default(newser)
 	return HttpResponseRedirect('/profile')
 
 def logout_user(request):
 	logout(request)
 	return HttpResponseRedirect('/signUp')
-

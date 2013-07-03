@@ -7,12 +7,21 @@ from music import views
 
 urlpatterns = patterns('',
     # Examples:
+<<<<<<< HEAD
+	url(r'^signUp/$', views.showSignUp),
+	url(r'^loginsubmit/$',views.submitlogin),
+	url(r'^submitsignup/$',views.signup),
+	url(r'^profile/$',views.profile),
+	url(r'^profile/addsong$',views.addsong),
+	#url(r'^homepage/$', views.homepage),
+=======
      url(r'^signUp/$', views.showSignUp),
 url(r'^loginsubmit/$',views.submitlogin),
 url(r'^submitsignup/$',views.signup),
 url(r'^profile/$',views.profile),
 url(r'^homepage/$', views.homepage),
 url(r'^logout/$', views.logout_user),
+>>>>>>> f44c18cefb00fc7b8c62c94882641274de015ec7
     # url(r'^musicLists/', include('musicLists.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
