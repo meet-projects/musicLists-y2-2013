@@ -44,5 +44,5 @@ def signup(request):
 
 def logout(request):
 	logout(request)
-	#redirect
+	return HttpResponseRedirect('/signUp')
 
