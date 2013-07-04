@@ -13,15 +13,25 @@
 
 		<form action="/submitsignup/" method="post">
 		{% csrf_token %}
-        		<input type="email" name="email" placeholder="Email" id="signup_email" data-required="required"/>
-    			<br>
+			
+			<input type="text" name="name" class="signup_username" placeholder="Username" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br> 
+			<div class="input2">
         		<input type="password" name="password" placeholder="Password" id="signup_password" data-required="required"/>
+			</div>
     			<br>
-			<input type="text" name="name" class="signup_username" placeholder="Username" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br>
-			<input type="text" name="firstname" class="signup_username" placeholder="First Name" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br>
-			<input type="text" name="lastname" class="signup_username" placeholder="Last Name" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br>
-			<input type="radio" name="sex" value="male">Male<br>
-			<input type="radio" name="sex" value="female">Female<br>
+			
+
+        		<div class = "inputF" ><input type="email" name="email" placeholder="Email" id="signup_email" data-required="required"/></div>
+    			<br>
+
+			<div class="input2" >
+			<input type="text" name="firstname" class="signup_username" placeholder="First Name" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br> </div>
+			
+			<input type="text" name="lastname" class="signup_username" placeholder="Last Name" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br> 
+		
+			<input type="radio" name="sex" value="male">Male<br> 
+		
+			<input type="radio" name="sex" value="female">Female<br> 
 		
 			
 			<select>
