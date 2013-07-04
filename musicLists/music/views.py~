@@ -89,7 +89,7 @@ def addsong(request):
 	return HttpResponseRedirect('/profile')
 
 def showaddsongs(request):
-	return render(request,'music/addsongs',{})
+	return render(request,'music/addsongs.html',{})
 
 			
 	
@@ -99,7 +99,7 @@ def logout_user(request):
 	return HttpResponseRedirect('/signUp')
 
 @login_required
-def post(request):
+def add_post(request):
 	text=request.POST['songname']
 	guy = Guy.objects.filter(user = request.user)
 	new_post=post(text=text, poster=guy)
