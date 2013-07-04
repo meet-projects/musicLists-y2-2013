@@ -88,7 +88,8 @@ class Guy(models.Model):
         guy.save()
         return guy
 
-class post(models.Model):
-    pass
-    #text=CharField(max_length=10000)
-    #poster=ForeignKey(Guy)
+class Postclass(models.Model):
+    	texti=models.CharField(max_length=10000)
+    	poster=models.ForeignKey('Guy')
+	def __unicode__(self):
+        	return self.texti
