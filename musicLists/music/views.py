@@ -44,8 +44,10 @@ def signup(request):
 
 def addsong(request):
 	songname = request.POST['songname']
-	guy = Guy.make_default(newser)
-	return HttpResponseRedirect('/profile')
+	artist_name=request.POST['artist']
+	album_name=request.POST['album']
+	genre=request.POST['genre']
+	
 
 def logout_user(request):
 	logout(request)
