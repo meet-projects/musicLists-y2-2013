@@ -1,3 +1,11 @@
+{% extends 'music/base.html' %}
+
+{% block headers %}
+
+<link rel="stylesheet" type="text/css" href="profile.css">
+
+{% endblock %}
+
 <html>
 <body background="{{ STATIC_URL }}images/rsz_1logo.jpg">
 
@@ -23,10 +31,14 @@
 <p>
 
 
+{% block content %}
+
+<p>
 <iframe width="640" height="360" src="https://www.youtube.com/embed/Jmd4OLzhQw0?feature=player_detailpage" frameborder="0" allowfullscreen></iframe> <br> <br>
 <span id='sname'>We Are The Champions- Queen</span>
 </p>
-</body>
-</form>
-</html>
+{% endblock %}
+
+
+
 
