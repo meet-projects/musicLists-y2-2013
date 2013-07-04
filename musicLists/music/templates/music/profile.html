@@ -8,18 +8,22 @@
 <img src="{{STATIC_URL}}images/images.jpeg" width="130" height="150"  alt="profilepic"/>
 <table id = "profile" border="1" >
 <tr>
-<td> name: {{user.first_name}}</td>
+<td> name: {{user.first_name}} {{user.last_name}}</td>
 </tr>
 <tr>
-<td> birthday: 13/05/1997</td>
+<td> birthday: 2/9/1997</td>
 </tr>
 </table><br><br>
 favourite songs: 
 <ul id = 'list'>
-	<li>       smack that </li>
+	<li>smack that </li>
 
-</ul> 
-
+</ul>
+<form action = "addsong" method="post">
+{% csrf_token %}
+song : <input type= "text" name = "songname"/>
+<input type = "submit" value="submit">
+</form>
 
 </body>
 </html>

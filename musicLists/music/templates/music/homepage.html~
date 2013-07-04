@@ -1,0 +1,32 @@
+<html>
+<body background="{{ STATIC_URL }}images/rsz_1logo.jpg">
+
+
+<span>
+<form action="/profile/" method="post">
+{% csrf_token %}
+		<input type="submit" value="Profile"/>
+</form>
+		<input type="submit" value="friends"/>
+		<input type="submit" value="Albums"/>
+		<input type="submit" value="Singers"/>
+		<input type="submit" value="categories"/>
+		<input type="submit" value="News"/>
+		<input type="submit" value="Top Music"/>
+<form action="/logout/" method="post">
+{% csrf_token %}
+		<input type="submit" value="logout"/>
+</form>
+
+</span>
+		<body background="{{ STATIC_URL }}images/rsz_1logo.jpg">
+<p>
+
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/Jmd4OLzhQw0?feature=player_detailpage" frameborder="0" allowfullscreen></iframe> <br> <br>
+<span id='sname'>We Are The Champions- Queen</span>
+</p>
+</body>
+</form>
+</html>
+

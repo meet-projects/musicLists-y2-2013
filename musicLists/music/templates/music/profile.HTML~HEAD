@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<link rel="stylesheet" type="text/css" href="profile.CSS">
+</head>
+<body class='dez'>
+<h1 id="header">Taste-profile</h1>
+<p><img src="images.jpeg" alt="profilepic"/></p>
+<table border="1" id="tex">
+<tr>
+<td> name: Haitham Slaibi</td>
+</tr>
+<tr>
+<td> birthday: 13/05/1997</td>
+</tr>
+</table><br><br>
+number of songs: 
+<ul id = 'list'>
+	<li>       woop woop! </li>
+</ul> 
+
+
+</body>
+</html>

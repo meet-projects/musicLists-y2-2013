@@ -4,9 +4,13 @@ span#h1
 	
 }
 
+.floatright
+{
+float: right;
+width: 1000px;
+}
 
 
-<style type="text/css">
 .classname {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -36,10 +40,8 @@ span#h1
 	position:relative;
 	top:1px;
 }
-</style>
 
-div#LogOut
-{
-	float:right;
-}
-	
+
+#sname{ color:blue; font-size:200%;}
+
+
