@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/profile.css">
-		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/base.css">
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}html/base.html">
 	</head>
 	<body class='dez'>
 		<h1>Profile</h1>
