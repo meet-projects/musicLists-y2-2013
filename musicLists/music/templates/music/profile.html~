@@ -1,34 +1,65 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/profile.css">
-		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/base.css">
-	</head>
-	<body class='dez'>
-		<h1>Profile</h1>
-		<img src="{{STATIC_URL}}images/images.jpeg" width="130" height="150"  alt="profilepic"/>
-		<table id = "profile" border="1" >
-		<tr>
-		<td> name: {{user.first_name}} {{user.last_name}}</td>
-		</tr>
-		<tr>
-		<td> birthday: 2/9/1997</td>
-		</tr>
-		</table><br><br>
-favourite songs: 
-		<ul id = 'list'>
-		<li>smack that </li>
+{% extends 'music/base.html' %}
+{% block headers %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/profile.css">
 
-		</ul>
-		<form action = "addsong" method="post">
-{% csrf_token %}
-song : <input type= "text" name = "songname"/>
-		<input type = "submit" value="submit">
-		</form>
-<form action="/addsong/" method="post">
-{% csrf_token %}
-		<input type="submit" value="Add Song"/>
-</form>
+{% endblock %}
+
+{% block content %}
+		<h1>Profile</h1>
+	<div>
+<img src="{{STATIC_URL}}images/images.jpeg" width="130" height="150"  alt="profilepic"/>
+	</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+<table>
+<tr>
+<td> name: {{user.first_name}} {{user.last_name}}</td>
+</tr>
+<tr>
+	<td>  13/05/1997</td>
+</tr>
+<tr> <td> Jerusalem </td>
+</tr>
+	</table>
+	<br>
+</div>
+
+<br>
+
+	<div id="profile">
+	<table id = "profile" border="1" >
+	<textarea id="u_jsonp_4_d" class="uiTextareaAutogrow input autofocus mentionsTextarea textInput DOMControl_placeholder" onkeydown="window.Bootloader && Bootloader.loadComponents(["control-textarea"], function() { TextAreaControl.getInstance(this) }.bind(this)); " aria-owns="js_12" aria-expanded="false" autocomplete="off" aria-autocomplete="list" role="textbox" placeholder="Share your taste" name="xhpc_message_text" title="Share your taste" aria-label="Share your taste " aria-haspopup="true"></textarea>
+<button class="_42ft _42fu _11b selected _42g-" type="submit" value="1">Post	</button> </table></div>
+
+	<br><br><br><br><br>
+
+	<p> Favourite Songs: 
+	</p>
+	<ul id = 'list'>
+	{{user.favsongs}}
+
+	</ul> 
+		<p id= Artists> Favourite Artists:
+	 </p>
+	<ul id = 'list'>
+
+	<li>Adele	 </li>
+	<li>Muse  	 </li>
+	<li>Rihanna  	 </li>
+<br>
+<hr>
+<div class="example">
+
+
+<h2>Posts</h2>
+<p></p>
+<p></p>
+<p>Add Your taste </p>
+</div>
 
 	</body>
 </html>
+{% endblock %}

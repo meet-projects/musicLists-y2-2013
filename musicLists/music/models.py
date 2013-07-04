@@ -42,7 +42,7 @@ class Album(models.Model):
         try:
             album = Album.objects.filter(name='empty')[0]
         except IndexError:
-            album = Album(name='empty', artist = Aritst.get_default())
+            album = Album(name='empty', artist = Artist.get_default())
             album.save()
             album.genres.add(Genre.get_default())
             album.save()
