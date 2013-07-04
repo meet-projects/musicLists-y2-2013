@@ -1,5 +1,38 @@
 {% extends 'music/base.html' %}
 
+<<<<<<< HEAD
+=======
+{% block headers %}
+
+<link rel="stylesheet" type="text/css" href="profile.css">
+
+{% endblock %}
+
+<html>
+<body background="{{ STATIC_URL }}images/music-dj-headphones-backgrounds-wallpapers.jpg">
+
+
+<span>
+<form action="/profile/" method="post">
+{% csrf_token %}
+		<input type="submit" value="Profile"/>
+</form>
+		<input type="submit" value="friends"/>
+		<input type="submit" value="Albums"/>
+		<input type="submit" value="Singers"/>
+		<input type="submit" value="categories"/>
+		<input type="submit" value="News"/>
+		<input type="submit" value="Top Music"/>
+<form action="/logout/" method="post">
+{% csrf_token %}
+		<input type="submit" value="logout"/>
+</form>
+
+</span>
+		<body background="{{ STATIC_URL }}music-dj-headphones-backgrounds-wallpapers.jpg">
+<p>
+
+>>>>>>> 17e0bd3e34f5e63711cca530ac21d11a418e1c93
 
 {% block content %}
 
