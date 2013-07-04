@@ -39,7 +39,7 @@
 	<p> Favourite Songs: 
 	</p>
 	<ul id = 'list'>
-	{{user.favsongs}}
+	{{user.favsongs.all()[0]}}
 
 	</ul> 
 		<p id= Artists> Favourite Artists:
@@ -60,6 +60,4 @@
 <p>Add Your taste </p>
 </div>
 
-	</body>
-</html>
 {% endblock %}

@@ -40,6 +40,7 @@ def signup(request):
 	FirstName=request.POST["firstname"]
 	LastName=request.POST["lastname"]
 	newser = User.objects.create_user(username=UserName, email=Email, password=Password, first_name=FirstName, last_name=LastName)
+	Guy(user=newser).save()
 	user = authenticate(username=UserName, password=Password)
 	login(request, user)
 	return HttpResponseRedirect('/profile')
@@ -55,7 +56,7 @@ def addsong(request):
 	genre = Genre.objects.filter(name=genre)[0]
 	if len(artist_name):
 		artist = Artist.objects.filter(name=artist_name)
-		if not len(artist):
+		if len(artist):
 			artist=Artist(name=artist_name)
 			artist.save()
 		else:
@@ -64,7 +65,7 @@ def addsong(request):
 		artist = Artist.get_default()
 	if len(album_name):
 		album = Album.objects.filter(name=album_name)
-		if not len(album):
+		if len(album):
 			album=Album(name=album_name, artist=artist)
 			artist.save()
 			album.genres.add(genre)
@@ -90,12 +91,8 @@ def addsong(request):
 
 @login_required
 def showaddsongs(request):
-<<<<<<< HEAD
-	return render(request,'music/addsongs.html',{})
-=======
 	genres = Genre.objects.all()
 	return render(request,'music/addsongs.html',{'genres': genres})
->>>>>>> 1e923a56455acfb678d26f4b5d46da189c4b3a77
 
 			
 	
