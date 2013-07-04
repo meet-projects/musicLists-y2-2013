@@ -5,11 +5,4 @@ h1{font-weight:bold;font-size:40px;}
 
 #profile{display: inline-block;}
 
-body { 
-  background: url(../images/rsz_1logo.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-</style>
+body {background-image:url('images/rsz_1logo.jpg');} 
