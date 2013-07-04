@@ -87,3 +87,7 @@ class Guy(models.Model):
         guy.favgenres.add(Genre.get_default())
         guy.save()
         return guy
+
+class post(models.Model):
+	text=CharField(max_length=10000)
+	poster=
