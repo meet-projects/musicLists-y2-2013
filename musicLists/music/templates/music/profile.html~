@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
 
  	<head>
 
@@ -75,4 +76,33 @@
 
 
 </body>
+=======
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/profile.css">
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}html/base.html">
+	</head>
+	<body class='dez'>
+		<h1>Profile</h1>
+		<img src="{{STATIC_URL}}images/images.jpeg" width="130" height="150"  alt="profilepic"/>
+		<table id = "profile" border="1" >
+		<tr>
+		<td> name: {{user.first_name}} {{user.last_name}}</td>
+		</tr>
+		<tr>
+		<td> birthday: 2/9/1997</td>
+		</tr>
+		</table><br><br>
+favourite songs: 
+		<ul id = 'list'>
+		<li>smack that </li>
+
+		</ul>
+		<form action = "addsong" method="post">
+{% csrf_token %}
+song : <input type= "text" name = "songname"/>
+		<input type = "submit" value="submit">
+		</form>
+
+	</body>
+>>>>>>> a5e3c23241da3115350e8113dd75e9d6a0f86add
 </html>

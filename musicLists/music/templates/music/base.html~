@@ -1,13 +1,40 @@
 <html>
 	<head>
-	<title>{% thing%} {%endthing%} </title>
-	{%hi%}
-	{% endthing%}
+
+		<title>{% block title %}{% endblock %}</title>
+
+   		{% block headers %}
+
+   		{% endblock %}
+
 	</head>
-	<body>
-	hi
-	{%block content%}
-	hey
-	{%block content %}
-	</body>
+
+		<body>
+
+		<span>
+		<form action="/profile/" method="post">
+		{% csrf_token %}
+			<input type="submit" value="Profile"/>
+		</form>
+			<input type="submit" value="friends"/>
+			<input type="submit" value="Albums"/>
+			<input type="submit" value="Singers"/>
+			<input type="submit" value="categories"/>
+			<input type="submit" value="News"/>
+			<input type="submit" value="Top Music"/>
+		<form action="/logout/" method="post">
+		{% csrf_token %}
+			<input type="submit" value="logout"/>
+		</form>
+
+   		</span>
+	</head>
+
+   		{% block content %}
+
+   
+
+   {% endblock %}
+
+ </body>
 </html>
