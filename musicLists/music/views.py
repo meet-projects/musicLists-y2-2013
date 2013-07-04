@@ -56,7 +56,7 @@ def addsong(request):
 	genre = Genre.objects.filter(name=genre)[0]
 	if len(artist_name):
 		artist = Artist.objects.filter(name=artist_name)
-		if not len(artist):
+		if len(artist):
 			artist=Artist(name=artist_name)
 			artist.save()
 		else:
@@ -67,7 +67,7 @@ def addsong(request):
 		album = Album.objects.filter(name=album_name)
 		if not len(album):
 			album=Album(name=album_name, artist=artist)
-			artist.save()
+			album.save()
 			album.genres.add(genre)
 			album.save()
 		else:

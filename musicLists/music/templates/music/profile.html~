@@ -16,7 +16,7 @@
 <div>
 <table>
 <tr>
-<td> Mike Pavlov</td>
+<td> name: {{user.first_name}} {{user.last_name}}</td>
 </tr>
 <tr>
 	<td>  13/05/1997</td>
@@ -39,9 +39,7 @@
 	<p> Favourite Songs: 
 	</p>
 	<ul id = 'list'>
-	<li> LMFAO-Party Rock 		</li>
-	<li> Adele-Someone like you 	</li>
-	<li> Adele-Skyfall 		</li>
+	{{user.favsongs.all()[0]}}
 
 	</ul> 
 		<p id= Artists> Favourite Artists:
@@ -62,6 +60,8 @@
 <p>Add Your taste </p>
 </div>
 
+<<<<<<< HEAD
+=======
 
 		<img src="{{STATIC_URL}}images/images.jpeg" width="130" height="150"  alt="profilepic"/>
 		<table id = "profile" border="1" >
@@ -82,4 +82,5 @@ favourite songs:
 song : <input type= "text" name = "songname"/>
 		<input type = "submit" value="submit">
 		</form>
+>>>>>>> 17e0bd3e34f5e63711cca530ac21d11a418e1c93
 {% endblock %}

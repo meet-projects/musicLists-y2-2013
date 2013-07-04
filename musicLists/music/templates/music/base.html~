@@ -3,6 +3,7 @@
 
 		<title>{% block title %}{% endblock %}</title>
 
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/base.css">
    		{% block headers %}
 
    		{% endblock %}
@@ -15,6 +16,10 @@
 		<form action="/profile/" method="post">
 		{% csrf_token %}
 			<input type="submit" value="Profile"/>
+		</form>
+		<form action="/addsong/" method="post">
+		{% csrf_token %}
+			<input type="submit" value="Add Song"/>
 		</form>
 			<input type="submit" value="friends"/>
 			<input type="submit" value="Albums"/>
