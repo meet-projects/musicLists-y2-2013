@@ -25,6 +25,10 @@ favourite songs:
 song : <input type= "text" name = "songname"/>
 		<input type = "submit" value="submit">
 		</form>
+<form action="/addsong/" method="post">
+{% csrf_token %}
+		<input type="submit" value="Add Song"/>
+</form>
 
 	</body>
 </html>

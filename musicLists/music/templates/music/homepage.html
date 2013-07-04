@@ -15,6 +15,11 @@
 {% csrf_token %}
 		<input type="submit" value="Profile"/>
 </form>
+
+<form action="/addsong/" method="post">
+{% csrf_token %}
+		<input type="submit" value="Add Song"/>
+</form>
 		<input type="submit" value="friends"/>
 		<input type="submit" value="Albums"/>
 		<input type="submit" value="Singers"/>
