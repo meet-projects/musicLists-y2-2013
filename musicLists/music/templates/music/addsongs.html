@@ -13,7 +13,15 @@ Add Song
 {% endblock %}
 
 {% block content %}
+<form action="/addsong" method="post">
 
+{% csrf_token %}
 
+Song name: <input type="text" name="songname"/><br>
+Artist: <input type="text" name="artist"/><br>
+Album: <input type="text" name="album"/><br>
+Genre: <input type="text" name="genre"/><br>
+<input type="submit" value="Add song" />
 
+</form>
 {% endblock %}
