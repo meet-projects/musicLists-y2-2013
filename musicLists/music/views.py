@@ -47,13 +47,13 @@ def signup(request):
 @login_required
 def addsong(request):
 	songname = request.POST['songname']
-	if songname =='':
+	if not len(songname):
 		return HttpResponseRedirect('/homepage')
 	artist_name=request.POST['artist']
 	album_name=request.POST['album']
 	genre=request.POST['genre']
 	genre = Genre.objects.filter(name=genre)[0]
-	if artist_name != '':
+	if not len(artist_name):
 		artist = Artist.objects.filter(name=artist_name)
 		if not len(artist):
 			artist=Artist(name=artist_name)
@@ -62,7 +62,7 @@ def addsong(request):
 			artist = artist[0]
 	else:
 		artist = Artist.get_default()
-	if album_name != '':
+	if not len(album_name):
 		album = Album.objects.filter(name=album_name)
 		if not len(album):
 			album=Album(name=album_name, artist=artist)
@@ -94,3 +94,10 @@ def addsong(request):
 def logout_user(request):
 	logout(request)
 	return HttpResponseRedirect('/signUp')
+
+@login_required
+def post(request):
+	text=request.POST['songname']
+	guy = Guy.objects.filter(user = request.user)
+	new_post=post(text=text, poster=guy)
+	new_post.save()

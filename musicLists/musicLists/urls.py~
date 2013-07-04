@@ -12,7 +12,7 @@ urlpatterns = patterns('',
 	url(r'^submitsignup/$',views.signup),
 	url(r'^profile/$',views.profile),
 	url(r'^profile/addsong$',views.addsong),
-	#url(r'^homepage/$', views.homepage),
+	url(r'^homepage/$', views.homepage),
 	url(r'^logout/$', views.logout_user),
     # url(r'^musicLists/', include('musicLists.foo.urls')),
 
