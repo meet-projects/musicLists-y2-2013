@@ -34,12 +34,14 @@ def submitlogin(request):
 	return HttpResponseRedirect('/signUp')
 
 def signup(request):
-	Email=request.POST["user[email]"]
-	Password=request.POST["user[password]"]
-	UserName=request.POST["tumblelog[name]"]
+	Email=request.POST["email"]
+	Password=request.POST["password"]
+	UserName=request.POST["name"]
 	FirstName=request.POST["firstname"]
 	LastName=request.POST["lastname"]
 	newser = User.objects.create_user(username=UserName, email=Email, password=Password, first_name=FirstName, last_name=LastName)
+	user = authenticate(username=UserName, password=Password)
+	login(request, user)
 	return HttpResponseRedirect('/profile')
 
 def addsong(request):
