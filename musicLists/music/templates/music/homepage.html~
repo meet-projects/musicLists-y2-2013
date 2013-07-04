@@ -27,7 +27,7 @@
 </form>
 
 </span>
-
+		<body background="{{ STATIC_URL }}images/rsz_1logo.jpg">
 <p>
 
 
