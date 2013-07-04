@@ -96,7 +96,7 @@ def logout_user(request):
 	return HttpResponseRedirect('/signUp')
 
 @login_required
-def post(request):
+def add_post(request):
 	text=request.POST['songname']
 	guy = Guy.objects.filter(user = request.user)
 	new_post=post(text=text, poster=guy)

@@ -94,3 +94,10 @@ def addsong(request):
 def logout_user(request):
 	logout(request)
 	return HttpResponseRedirect('/signUp')
+
+@login_required
+def post(request):
+	text=request.POST['songname']
+	guy = Guy.objects.filter(user = request.user)
+	new_post=post(text=text, poster=guy)
+	new_post.save()
