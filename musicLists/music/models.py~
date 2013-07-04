@@ -89,6 +89,6 @@ class Guy(models.Model):
         return guy
 
 class post(models.Model):
-	pass
-	#text=CharField(max_length=10000)
-	#poster=ForeignKey(Guy)
+    pass
+    #text=CharField(max_length=10000)
+    #poster=ForeignKey(Guy)
