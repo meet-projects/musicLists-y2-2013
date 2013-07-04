@@ -1,4 +1,5 @@
-<html>
+<html> 
+<base>
 <body background="{{ STATIC_URL }}images/rsz_1logo.jpg">
 
 
@@ -19,7 +20,7 @@
 </form>
 
 </span>
-		<body background="{{ STATIC_URL }}images/rsz_1logo.jpg">
+</base>
 <p>
 
 
