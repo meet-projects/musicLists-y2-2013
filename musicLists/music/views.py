@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from models import Artist, Song, Guy, Genre, Album
+from models import Artist, Song, Guy, Genre, Album, Postclass
 
  
 def showSignUp(request):
@@ -56,7 +56,7 @@ def addsong(request):
 	genre = Genre.objects.filter(name=genre)[0]
 	if len(artist_name):
 		artist = Artist.objects.filter(name=artist_name)
-		if len(artist):
+		if not len(artist):
 			artist=Artist(name=artist_name)
 			artist.save()
 		else:
@@ -74,8 +74,6 @@ def addsong(request):
 			album = album[0]
 	else:
 		album = Album.get_default()
-	
-
 	song = Song.objects.filter(name=songname)
 	if not len(song):
 		song=Song(name=songname, artist=artist, album=album)
@@ -87,7 +85,7 @@ def addsong(request):
 	guy = Guy.objects.filter(user=request.user)[0]
 	guy.favsongs.add(song)
 	guy.save()
-	return HttpResponseRedirect('/profile')
+        return HttpResponseRedirect('/profile')
 
 @login_required
 def showaddsongs(request):
@@ -103,7 +101,8 @@ def logout_user(request):
 
 @login_required
 def add_post(request):
-	text=request.POST['songname']
-	guy = Guy.objects.filter(user = request.user)
-	new_post=post(text=text, poster=guy)
+	text=request.POST['xhpc_message_text']
+	new_post=Postclass(texti=text, poster=request.user.guy)
 	new_post.save()
+	return HttpResponseRedirect('/profile')
+

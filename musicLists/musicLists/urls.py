@@ -15,6 +15,7 @@ urlpatterns = patterns('',
 	url(r'^homepage/$', views.homepage),
 	url(r'^logout/$', views.logout_user),
 	url(r'^showaddsong/$', views.showaddsongs),
+	url(r'^makepost/$', views.add_post),
     # url(r'^musicLists/', include('musicLists.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
