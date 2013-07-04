@@ -82,7 +82,7 @@ def addsong(request):
 		song.save()
 	else:
 		song = song[0]
-	guy = Guy.objects.filter(user = request.user)[0]
+	guy = Guy.objects.filter(user=request.user)[0]
 	guy.favsongs.add(song)
 	guy.save()
         return HttpResponseRedirect('/profile')

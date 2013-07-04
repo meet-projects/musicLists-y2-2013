@@ -1,13 +1,12 @@
 {% extends 'music/base.html' %}
 
 {% block headers %}
-
 <link rel="stylesheet" type="text/css" href="profile.css">
+<link rel="stylesheet" type="text/css" href="homepage.css">
 
 {% endblock %}
 
 <html>
-<body background="{{ STATIC_URL }}images/rsz_1logo.jpg">
 
 
 <span>
@@ -32,7 +31,6 @@
 </form>
 
 </span>
-		<body background="{{ STATIC_URL }}images/rsz_1logo.jpg">
 <p>
 
 
