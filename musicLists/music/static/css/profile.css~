@@ -9,14 +9,11 @@ color: #167866;
 
 #profile{display: inline-block;}
 
-<<<<<<< HEAD
-
-
 table, td, th
 {
 border:1px solid white;
 font-family:arial;
-color:black;
+color:white;
 font-weight:bold;
 
 }
@@ -36,6 +33,7 @@ font-size:120%;
 div{
 float:left;
 }
+
  
 div#profile
 { 
@@ -49,7 +47,5 @@ width: 250px;
 height: 50px;
 }
 
+body {background-image: url('../images/music-equalizer-background.jpg');}
 
-=======
-body {background-image:url('images/rsz_1logo.jpg');} 
->>>>>>> a5e3c23241da3115350e8113dd75e9d6a0f86add
