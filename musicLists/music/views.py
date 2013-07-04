@@ -30,7 +30,7 @@ def submitlogin(request):
 	if user is not None:
 		if user.is_active:
 			login(request,user)
-			return HttpResponseRedirect('/profile')
+			return HttpResponseRedirect('/homepage')
 	return HttpResponseRedirect('/signUp')
 
 def signup(request):
@@ -40,7 +40,7 @@ def signup(request):
 	FirstName=request.POST["firstname"]
 	LastName=request.POST["lastname"]
 	newser = User.objects.create_user(username=UserName, email=Email, password=Password, first_name=FirstName, last_name=LastName)
-	return HttpResponseRedirect('/profile')
+	return HttpResponseRedirect('/homepage')
 
 def addsong(request):
 	songname = request.POST['songname']
