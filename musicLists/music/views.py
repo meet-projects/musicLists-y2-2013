@@ -130,6 +130,7 @@ def addalbum(request):
 	genre=request.POST['genre']
 	artist_name=request.POST['artist']
 	genre = Genre.objects.filter(name=genre)[0]
+
 	if len(artist_name):
 		artist = Artist.objects.filter(name=artist_name)
 		if not len(artist):
@@ -141,7 +142,10 @@ def addalbum(request):
 		artist = Artist.get_default()
 	album= Album.objects.filter(name=album_name)
 	if not len(album):
-		album=Album(name=album_name, artist=artist, genres=genre)
+		print genre
+		album=Album(name=album_name, artist=artist)
+		album.save()
+		album.genres.add()
 		album.save()
 		
 	else:

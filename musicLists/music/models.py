@@ -75,6 +75,7 @@ class Guy(models.Model):
     favsongs=models.ManyToManyField('Song')
     favartists=models.ManyToManyField('Artist')
     favgenres=models.ManyToManyField('Genre')
+    favalbums=models.ManyToManyField('Album')
     def __unicode__(self):
         return self.user.username
 
