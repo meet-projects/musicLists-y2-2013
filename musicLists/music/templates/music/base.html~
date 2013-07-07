@@ -3,7 +3,7 @@
 
 		<title>{% block title %}{% endblock %}</title>
 
-		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/base.css">
+		
    		{% block headers %}
 
    		{% endblock %}
@@ -15,7 +15,7 @@
 		<span>
 		<form action="/profile/" method="post">
 		{% csrf_token %}
-			<input type="submit" value="Profile"/>
+			<input id = "test" type="submit" value="Profile"/>
 		</form>
 		<form action="/showaddsong/" method="post">
 		{% csrf_token %}

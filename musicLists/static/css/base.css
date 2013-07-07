@@ -1,0 +1,19 @@
+
+body { 
+  background: url(../images/rsz_1logo.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+input[type=submit] {
+  color: black;
+  background-color: #66CC66;
+  border-radius: 8px;
+}
+
+
+
+
+

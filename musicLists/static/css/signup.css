@@ -25,7 +25,7 @@ p#signUp
 	font-weight:bold;color:black;
 	}
 
-p1#login{
+p1#logIn{
 	font-weight:bold;color:black;
 	}
 
@@ -45,11 +45,22 @@ border-style:solid;
 border-bottom-color:#FFFFFF;
 }
 
-.inputF{
+input[type=submit] {
+  color: black;
+  background-color: #CCFFCC;
+  border-radius: 8px;
+}
+
+table{
+color:white;font-weight:bold;
 }
  
-.input2{
-}
+
+
+select{
+color: black;
+  background-color: #FFFF66;
+  border-radius: 8px; }
 
 
 
@@ -59,7 +70,7 @@ border-bottom-style:double;
 
 
 
-.logIn {
+#ButtonStyle{
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -79,12 +90,13 @@ border-bottom-style:double;
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #ffffff;
-}.logIn:hover {
+}.signup:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
 	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
 	background-color:#dfdfdf;
-}.logIn:active {
+	background-attachment: fixed 
+}.classname:active {
 	position:relative;
 	top:1px;
 }

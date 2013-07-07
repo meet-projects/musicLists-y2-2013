@@ -16,6 +16,7 @@ Add Song
 <form action="/addsong/" method="post" id="addsong">
 
 {% csrf_token %}
+<div id= "stuff">
 <table>
 <span id='sname'>
 <tr><td>Song name:</td><td> <input type="text" name="songname"/></td></tr>
@@ -30,5 +31,6 @@ Add Song
 <tr><td>Youtube link:</td><td> <input type="text" name="link"/></td></tr>
 <tr><td><input type="submit" value="Add song" /></td></tr>
 </table>
+</div>
 </form>
 {% endblock %}

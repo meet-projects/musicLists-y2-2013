@@ -6,4 +6,14 @@ color:white;
 background-attachment: fixed 
 }
 
-#sname{ color: 	660066; font-size:200%;}
+#sname{ 
+	color: 	660066; 
+	font-size:200%; 
+}
+
+#stuff {font-weight: bold;
+color:blue;
+}
+td {
+	color:white; font-weight:bold; font-size:30px;
+}

@@ -8,8 +8,12 @@ body {
 }
 
 input[type=submit] {
-  color: white;
-  background-color: #CCFFCC;
+  color: black;
+  background-color: #66CC66;
   border-radius: 8px;
 }
+
+
+
+
 
