@@ -46,6 +46,11 @@ textarea#u_jsonp_4_d
 width: 250px;
 height: 50px;
 }
+body
+{
+background-image:url('../images/backpic.jpg');
+background-repeat:no-repeat;
+} 
 
 body {background-image: url('../images/music-equalizer-background.jpg');}
 

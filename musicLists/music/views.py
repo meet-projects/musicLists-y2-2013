@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from models import Artist, Song, Guy, Genre, Album
+from models import Artist, Song, Guy, Genre, Album, Postclass
 
  
 def showSignUp(request):
@@ -49,14 +49,14 @@ def signup(request):
 def addsong(request):
 	songname = request.POST['songname']
 	if not len(songname):
-		return HttpResponseRedirect('/homepage')
+		return HttpResponseRedirect('/addsong')
 	artist_name=request.POST['artist']
 	album_name=request.POST['album']
 	genre=request.POST['genre']
 	genre = Genre.objects.filter(name=genre)[0]
 	if len(artist_name):
 		artist = Artist.objects.filter(name=artist_name)
-		if len(artist):
+		if not len(artist):
 			artist=Artist(name=artist_name)
 			artist.save()
 		else:
@@ -74,8 +74,6 @@ def addsong(request):
 			album = album[0]
 	else:
 		album = Album.get_default()
-	
-
 	song = Song.objects.filter(name=songname)
 	if not len(song):
 		song=Song(name=songname, artist=artist, album=album)
@@ -87,15 +85,17 @@ def addsong(request):
 	guy = Guy.objects.filter(user=request.user)[0]
 	guy.favsongs.add(song)
 	guy.save()
-	return HttpResponseRedirect('/profile')
+        return HttpResponseRedirect('/profile')
 
 @login_required
 def showaddsongs(request):
 	genres = Genre.objects.all()
 	return render(request,'music/addsongs.html',{'genres': genres})
 
-			
-	
+@login_required
+def showaddartist(request):
+	return render(request,'music/addartist.html')
+
 
 def logout_user(request):
 	logout(request)
@@ -103,7 +103,61 @@ def logout_user(request):
 
 @login_required
 def add_post(request):
-	text=request.POST['songname']
-	guy = Guy.objects.filter(user = request.user)
-	new_post=post(text=text, poster=guy)
+	text=request.POST['xhpc_message_text']
+	new_post=Postclass(texti=text, poster=request.user.guy)
 	new_post.save()
+	return HttpResponseRedirect('/profile')
+
+def addartist(request):
+	artist_name=request.POST['artist']
+	if not len(artist_name):
+		return HttpResponseRedirect('/addsong')
+	artist = Artist.objects.filter(name=artist_name)
+	if not len(artist):
+		artist=Artist(name=artist_name)
+		artist.save()
+	else:
+		artist = artist[0]
+	guy = Guy.objects.filter(user=request.user)[0]
+	guy.favartists.add(artist)
+	guy.save()
+        return HttpResponseRedirect('/profile')
+
+def addalbum(request):
+	album_name=request.POST['album']
+	if not len(album_name):
+		return HttpResponseRedirect('/addalbum')
+	genre=request.POST['genre']
+	artist_name=request.POST['artist']
+	genre = Genre.objects.filter(name=genre)[0]
+
+	if len(artist_name):
+		artist = Artist.objects.filter(name=artist_name)
+		if not len(artist):
+			artist=Artist(name=artist_name)
+			artist.save()
+		else:
+			artist = artist[0]
+	else:
+		artist = Artist.get_default()
+	album= Album.objects.filter(name=album_name)
+	if not len(album):
+		print genre
+		album=Album(name=album_name, artist=artist)
+		album.save()
+		album.genres.add()
+		album.save()
+		
+	else:
+		album = album[0]
+	guy = Guy.objects.filter(user=request.user)[0]
+	guy.favalbums.add(album)
+	guy.save()
+        return HttpResponseRedirect('/profile')
+
+def showaddalbum(request):
+	genres = Genre.objects.all()
+	return render(request,'music/addalbum.html',{'genres': genres})
+
+	
+

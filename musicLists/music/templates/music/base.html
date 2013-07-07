@@ -21,6 +21,10 @@
 		{% csrf_token %}
 			<input type="submit" value="Add Song"/>
 		</form>
+		<form action="/showaddartist/" method="post">
+		{% csrf_token %}
+			<input type="submit" value="Add Artist"/>
+		</form>
 			<input type="submit" value="friends"/>
 			<input type="submit" value="Albums"/>
 			<input type="submit" value="Singers"/>
@@ -33,6 +37,7 @@
 		</form>
 
    		</span>
+</body>
 	</head>
 
    		{% block content %}
@@ -41,5 +46,4 @@
 
    {% endblock %}
 
- </body>
 </html>

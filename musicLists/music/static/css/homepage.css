@@ -3,5 +3,16 @@
 
 body {background-image: url('../images/music-dj-headphones-backgrounds-wallpapers.jpg');}
 
+#sname{ color:blue; font-size:200%;}
+
+body
+{
+background-image:url('../images/cute-twitter-backgrounds.jpg');
+background-repeat:no-repeat;
+} 
+
+input{
+	border-radius: 8px;
+}
 
 

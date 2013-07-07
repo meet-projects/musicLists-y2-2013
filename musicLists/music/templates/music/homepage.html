@@ -1,6 +1,5 @@
 {% extends 'music/base.html' %}
 
-
 {% block headers %}
 <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/profile.css">
 <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/homepage.css">
@@ -8,9 +7,10 @@
 {% endblock %}
 
 <html>
+<body>
 
 
-<span>
+<!--span>
 <form action="/profile/" method="post">
 {% csrf_token %}
 		<input type="submit" value="Profile"/>
@@ -26,7 +26,7 @@
 		<input type="submit" value="logout"/>
 </form>
 
-</span>
+</span-->
 <p>
 
 
@@ -37,6 +37,7 @@
 <span id='sname'>We Are The Champions- Queen</span>
 </p>
 {% endblock %}
+</body>
 
 
 
