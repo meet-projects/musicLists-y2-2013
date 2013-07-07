@@ -19,7 +19,6 @@ def homepage(request):
 @login_required
 def profile(request):
         user = request.user
-        print user
 	context = {}
     	return render(request, 'music/profile.html', context)
 
@@ -159,6 +158,7 @@ def addalbum(request):
 def showaddalbum(request):
 	genres = Genre.objects.all()
 	return render(request,'music/addalbum.html',{'genres': genres})
+
 
 	
 
