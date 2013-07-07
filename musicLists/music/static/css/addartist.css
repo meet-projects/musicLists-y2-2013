@@ -11,4 +11,6 @@ input[type=submit] {
   border-radius: 8px;
 }
 
-
+td{
+	color:white; font-weight:bold; font-size:30px;
+}
