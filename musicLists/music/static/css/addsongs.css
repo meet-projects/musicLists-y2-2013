@@ -1,6 +1,6 @@
 body
 {
-background-image:url('../images/cute-twitter-backgrounds.jpg');
+background-image:url('../images/index.jpeg');
 background-repeat:no-repeat;
 color:white;
 background-attachment: fixed 
@@ -15,5 +15,5 @@ background-attachment: fixed
 color:blue;
 }
 td {
-	color:white; font-weight:bold; font-size:30px;
+	color:black; font-weight:bold; font-size:30px;
 }
