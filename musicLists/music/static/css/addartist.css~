@@ -1,6 +1,16 @@
 body
 {
-background-image:url('../images/cute-twitter-backgrounds.jpg');
+background-image:url('../images/324585.jpg');
 background-repeat:no-repeat;
 background-attachment: fixed 
+}
+
+input[type=submit] {
+  color: black;
+  background-color: #FF9999;
+  border-radius: 8px;
+}
+
+table{
+	color:white; font-weight:bold; font-size:30px;
 }

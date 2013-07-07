@@ -25,7 +25,7 @@ p#signUp
 	font-weight:bold;color:black;
 	}
 
-p1#login{
+p1#logIn{
 	font-weight:bold;color:black;
 	}
 
@@ -45,11 +45,22 @@ border-style:solid;
 border-bottom-color:#FFFFFF;
 }
 
-.inputF{
+input[type=submit] {
+  color: black;
+  background-color: #CCFFCC;
+  border-radius: 8px;
+}
+
+table{
+color:white;font-weight:bold;
 }
  
-.input2{
-}
+
+
+select{
+color: black;
+  background-color: #FFFF66;
+  border-radius: 8px; }
 
 
 

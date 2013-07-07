@@ -1,9 +1,19 @@
 body
 {
-background-image:url('../images/cute-twitter-backgrounds.jpg');
+background-image:url('../images/index.jpeg');
 background-repeat:no-repeat;
 color:white;
 background-attachment: fixed 
 }
 
-#sname{ color: 	660066; font-size:200%;}
+#sname{ 
+	color: 	660066; 
+	font-size:200%; 
+}
+
+#stuff {font-weight: bold;
+color:blue;
+}
+td {
+	color:black; font-weight:bold; font-size:30px;
+}
