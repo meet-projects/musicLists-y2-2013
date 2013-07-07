@@ -1,0 +1,24 @@
+{% extends 'music/base.html' %}
+
+{% block title %}
+
+Add Artist
+
+{% endblock %}
+
+{% block headers %}
+
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/addartist.css">
+
+{% endblock %}
+
+{% block content %}
+<form action="/addartist/" method="post" id="addsong">
+
+{% csrf_token %}
+<table>
+<tr><td>Artist Name:</td><td> <input type="text" name="artist"/></td></tr>
+<tr><td><input type="submit" value="Add Artist" /></td></tr>
+</table>
+</form>
+{% endblock %}

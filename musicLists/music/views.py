@@ -19,7 +19,6 @@ def homepage(request):
 @login_required
 def profile(request):
         user = request.user
-        print user
 	context = {}
     	return render(request, 'music/profile.html', context)
 
@@ -53,6 +52,7 @@ def addsong(request):
 	artist_name=request.POST['artist']
 	album_name=request.POST['album']
 	genre=request.POST['genre']
+	link=request.POST['link']
 	genre = Genre.objects.filter(name=genre)[0]
 	if len(artist_name):
 		artist = Artist.objects.filter(name=artist_name)
@@ -76,7 +76,7 @@ def addsong(request):
 		album = Album.get_default()
 	song = Song.objects.filter(name=songname)
 	if not len(song):
-		song=Song(name=songname, artist=artist, album=album)
+		song=Song(name=songname, artist=artist, album=album, link=link)
 		song.save()
 		song.genres.add(genre)
 		song.save()
@@ -158,6 +158,7 @@ def addalbum(request):
 def showaddalbum(request):
 	genres = Genre.objects.all()
 	return render(request,'music/addalbum.html',{'genres': genres})
+
 
 	
 

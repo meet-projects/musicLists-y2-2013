@@ -13,7 +13,8 @@ background-repeat:no-repeat;
 {
 background-image:url('../images/cute-twitter-backgrounds.jpg');
 background-repeat:no-repeat;
-}*/
+background-attachment: fixed 
+} 
 
 input{
 	border-radius: 8px;
