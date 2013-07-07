@@ -7,17 +7,13 @@
 {% endblock %}
 
 <html>
+<body>
 
 
-<span>
+<!--span>
 <form action="/profile/" method="post">
 {% csrf_token %}
 		<input type="submit" value="Profile"/>
-</form>
-
-<form action="/addsong/" method="post">
-{% csrf_token %}
-		<input type="submit" value="Add Song"/>
 </form>
 		<input type="submit" value="friends"/>
 		<input type="submit" value="Albums"/>
@@ -30,7 +26,7 @@
 		<input type="submit" value="logout"/>
 </form>
 
-</span>
+</span-->
 <p>
 
 
@@ -41,6 +37,7 @@
 <span id='sname'>We Are The Champions- Queen</span>
 </p>
 {% endblock %}
+</body>
 
 
 
