@@ -1,17 +1,15 @@
 {% extends 'music/base.html' %}
 
-<<<<<<< HEAD
-=======
 {% block headers %}
-<link rel="stylesheet" type="text/css" href="profile.css">
-<link rel="stylesheet" type="text/css" href="homepage.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/profile.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/homepage.css">
 
 {% endblock %}
 
 <html>
+<body>
 
-
-<span>
+<!--span>
 <form action="/profile/" method="post">
 {% csrf_token %}
 		<input type="submit" value="Profile"/>
@@ -27,18 +25,20 @@
 		<input type="submit" value="logout"/>
 </form>
 
-</span>
+</span-->
 <p>
 
->>>>>>> 17e0bd3e34f5e63711cca530ac21d11a418e1c93
+<font face="verdana" color="green">This is some text!</font> 
+
 
 {% block content %}
 
 <p>
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Jmd4OLzhQw0?feature=player_detailpage" frameborder="0" allowfullscreen></iframe> <br> <br>
+<iframe width="600" height="400" src="https://www.youtube.com/embed/Jmd4OLzhQw0?feature=player_detailpage" frameborder="0" allowfullscreen></iframe> <br> <br>
 <span id='sname'>We Are The Champions- Queen</span>
 </p>
 {% endblock %}
+</body>
 
 
 

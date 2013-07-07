@@ -1,23 +1,20 @@
 {% extends 'music/base.html' %}
 
 {% block headers %}
-<link rel="stylesheet" type="text/css" href="profile.css">
-<link rel="stylesheet" type="text/css" href="homepage.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/profile.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/homepage.css">
 
 {% endblock %}
 
 <html>
+<body>
 
+<font face="verdana" color="green">This is some text!</font> 
 
-<span>
+<!--span>
 <form action="/profile/" method="post">
 {% csrf_token %}
 		<input type="submit" value="Profile"/>
-</form>
-
-<form action="/addsong/" method="post">
-{% csrf_token %}
-		<input type="submit" value="Add Song"/>
 </form>
 		<input type="submit" value="friends"/>
 		<input type="submit" value="Albums"/>
@@ -30,17 +27,20 @@
 		<input type="submit" value="logout"/>
 </form>
 
-</span>
+</span-->
 <p>
+
+<font face="verdana" color="green">This is some text!</font> 
 
 
 {% block content %}
 
 <p>
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Jmd4OLzhQw0?feature=player_detailpage" frameborder="0" allowfullscreen></iframe> <br> <br>
+<iframe width="600" height="400" src="https://www.youtube.com/embed/Jmd4OLzhQw0?feature=player_detailpage" frameborder="0" allowfullscreen></iframe> <br> <br>
 <span id='sname'>We Are The Champions- Queen</span>
 </p>
 {% endblock %}
+</body>
 
 
 

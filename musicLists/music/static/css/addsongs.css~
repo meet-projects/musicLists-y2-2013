@@ -1,4 +1,5 @@
-input {
-    width: 100%;
-    clear: both;
+body
+{
+background-image:url('../images/cute-twitter-backgrounds.jpg');
+background-repeat:no-repeat;
 }
