@@ -1,0 +1,21 @@
+
+#sname{ color: white; font-size:150%;} 
+
+/*body
+{
+background-image: url('../images/music-dj-headphones-backgrounds-wallpapers.jpg');
+background-repeat:no-repeat;
+}
+*/
+#sname{ color:white; font-size:200%;}
+body
+{
+background-image:url('../images/cute-twitter-backgrounds.jpg');
+background-repeat:no-repeat;
+}
+
+input{
+	border-radius: 8px;
+}
+
+
