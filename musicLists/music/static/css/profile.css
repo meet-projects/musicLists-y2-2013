@@ -14,7 +14,7 @@ table, td, th
 {
 border:1px solid white;
 font-family:arial;
-color:black;
+color:white;
 font-weight:bold;
 
 }
@@ -34,6 +34,7 @@ font-size:120%;
 div{
 float:left;
 }
+
  
 div#profile
 { 
@@ -46,4 +47,14 @@ textarea#u_jsonp_4_d
 width: 250px;
 height: 50px;
 }
+body
+{
+background-image:url('../images/backpic.jpg');
+background-repeat:no-repeat;
+background-attachment: fixed 
+} 
+
+body {background-image: url('../images/music-equalizer-background.jpg');}
+
+#lolo{color:white ;}
 

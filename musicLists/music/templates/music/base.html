@@ -23,6 +23,10 @@
 		<form action="/homepage/" method="post">
 		{% csrf_token %}
 			<input type="submit" value="home page"/>
+
+		<form action="/showaddartist/" method="post">
+		{% csrf_token %}
+			<input type="submit" value="Add Artist"/>
 		</form>
 			<input type="submit" value="friends"/>
 			<input type="submit" value="Albums"/>
@@ -36,6 +40,7 @@
 		</form>
 
    		</span>
+</body>
 	</head>
 
    		{% block content %}
@@ -44,5 +49,4 @@
 
    {% endblock %}
 
- </body>
 </html>

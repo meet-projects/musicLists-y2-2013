@@ -42,16 +42,25 @@
 <div id ="lolo"> 	<p> Favourite Songs: 
 	</p>
 	<ul id = 'list'>
-	
+	{% for song in user.guy.favsongs.all %}
+		<li> {{song.name}} - {{song.artist}} <br>
+		{{song.album}}<br>
+		{{song.link}}
+<br>
+<br>
+	</li>  
+	{% endfor %}
 
 	</ul> 
 		<p id= Artists> Favourite Artists:
 	 </p>
 	<ul id = 'list'>
-
-	<li>Adele	 </li>
-	<li>Muse  	 </li>
-	<li>Rihanna  	 </li>
+{% for artist in user.guy.favartists.all %}
+		<li> {{artist.name}} 
+<br>
+<br>
+	</li>  
+	{% endfor %}
 <br>
 <hr>
 <div class="example">
