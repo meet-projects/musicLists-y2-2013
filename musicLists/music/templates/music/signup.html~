@@ -5,7 +5,7 @@
 
     <body background="{{ STATIC_URL }}images/rsz_1logo.jpg">
     	<div id="SignUp">
-    <body>
+   
 	<div id="bg">
   	<img src="rsz_1logo.jpg" alt="">
 	</div>
@@ -26,8 +26,8 @@
 
 			<div class="input2" >
 			<input type="text" name="firstname" class="signup_username" placeholder="First Name" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br> </div>
-			<div class="inputU" >
-			<input type="text" name="lastname" class="signup_username" placeholder="Last Name" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br> </div>
+			
+			<input type="text" name="lastname" class="signup_username" placeholder="Last Name" id="signup_username" maxlength="32" autocorrect="off" autocapitalize="off"/><br> 
 		
 			<input type="radio" name="sex" value="male">Male<br> 
 		
@@ -140,16 +140,43 @@
 				<option value="2012">2012</option>
 				<option value="2013">2013</option>
 			</select><br>
-			<input type="submit" value="Sign Up and Start"/>	
+			<input type="submit" style="-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#ededed;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+}.signup:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+}.signup:active {
+	position:relative;
+	top:1px;" value="Sign Up and Start"/>	
         	</form>
  	</div>
+	<div id= logIn>	
 	<p id = "logIn">Log in</p>
-	<div id= logIn>
+
 		<form action="/loginsubmit/" method="post">
 {% csrf_token %}
 			<input type="text" name="username" placeholder="User Name" id="signup_email" data-required="required">
 			<br>
-			<input type="password" name="password" placeholder="Password" id="signup_password" data-required="required">
+			<input type="password" name="Password" placeholder="Password" id="signup_password" data-required="required">
 			<br>
     			<input type="submit" value="Log in"/>
 		</form>
