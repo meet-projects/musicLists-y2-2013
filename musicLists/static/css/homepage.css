@@ -1,65 +1,17 @@
-
-div#signUp
+span#h1
 {
 	float:right;
-}
-
-div#logIn
-{
-	float: left;
-}
-input{
-	border-radius: 5px;
-}
-
-
-div#SignUp
-{
-	color:black;
-	font-weight:bold
 	
 }
 
-p#signUp
-	{
-	font-weight:bold;color:black;
-	}
-
-p1#login{
-	font-weight:bold;color:black;
-	}
-
-
-body { 
-  background: url(../images/rsz_1logo.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-</style>
-
-p
+.floatright
 {
-border-style:solid;
-border-bottom-color:#FFFFFF;
-}
-
-.inputF{
-}
- 
-.input2{
+float: right;
+width: 1000px;
 }
 
 
-
-border-style:double;
-border-bottom-style:double;
-} }
-
-
-
-#ButtonStyle{
+.classname {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -79,22 +31,23 @@ border-bottom-style:double;
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #ffffff;
-}.signup:hover {
+}.classname:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
 	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
 	background-color:#dfdfdf;
-	background-attachment: fixed 
 }.classname:active {
 	position:relative;
 	top:1px;
 }
 
 
+#sname{ color:blue; font-size:200%;}
 
-div#Login
-{
-	color:black;
-	font-weight:bold
-	
+body {background-image: url('music-dj-headphones-backgrounds-wallpapers.jpg}
+
+input{
+	border-radius: 8px;
 }
+
+

@@ -2,6 +2,8 @@
 {% block headers %}
 <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/profile.css">
 
+
+
 {% endblock %}
 
 {% block content %}
@@ -19,11 +21,11 @@
 <td> name: {{user.first_name}} {{user.last_name}}</td>
 </tr>
 <tr>
-	<td>  13/05/1997</td>
+<td>  13/05/1997</td>
 </tr>
 <tr> <td> Jerusalem </td>
 </tr>
-	</table>
+</table>
 	<br>
 </div>
 
