@@ -3,5 +3,6 @@ body
 background-image:url('../images/music-equalizer-background.jpg');
 background-repeat:no-repeat;
 color:white;
+background-attachment: fixed 
 
 } 

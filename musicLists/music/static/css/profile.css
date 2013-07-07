@@ -49,5 +49,6 @@ body
 {
 background-image:url('../images/backpic.jpg');
 background-repeat:no-repeat;
+background-attachment: fixed 
 } 
 
