@@ -46,6 +46,11 @@ def signup(request):
 	return HttpResponseRedirect('/profile')
 
 @login_required
+def welome(request):
+	contex = {}
+	return render(request,'music/welcome.html',contex)
+
+@login_required
 def addsong(request):
 	songname = request.POST['songname']
 	if not len(songname):

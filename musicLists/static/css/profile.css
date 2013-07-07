@@ -1,1 +1,49 @@
 #list{margin-left:100px;}
+
+
+
+h1{
+font-weight:bold;
+font-size:40px;
+color: #167866;
+}
+
+#profile{display: inline-block;}
+
+table, td, th
+{
+border:1px solid white;
+font-family:arial;
+color:black;
+font-weight:bold;
+
+}
+
+th
+{
+background-color:green;
+color:white;
+
+}
+
+p{
+font-weight:bold;
+font-size:120%;
+
+}
+div{
+float:left;
+}
+ 
+div#profile
+{ 
+margin-left:100px;
+}
+
+
+textarea#u_jsonp_4_d
+{
+width: 250px;
+height: 50px;
+}
+

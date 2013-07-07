@@ -2,6 +2,8 @@
 {% block headers %}
 <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/profile.css">
 
+
+
 {% endblock %}
 
 {% block content %}
@@ -9,6 +11,7 @@
 	<div>
 <img src="{{STATIC_URL}}images/images.jpeg" width="130" height="150"  alt="profilepic"/>
 	</div>
+<body background="{{ STATIC_URL }}images/profile_background.jpg">
 <br>
 <br>
 <br>
@@ -19,11 +22,11 @@
 <td> name: {{user.first_name}} {{user.last_name}}</td>
 </tr>
 <tr>
-	<td>  13/05/1997</td>
+<td>  13/05/1997</td>
 </tr>
 <tr> <td> Jerusalem </td>
 </tr>
-	</table>
+</table>
 	<br>
 </div>
 
@@ -36,7 +39,7 @@
 
 	<br><br><br><br><br>
 
-	<p> Favourite Songs: 
+<div id ="lolo"> 	<p> Favourite Songs: 
 	</p>
 	<ul id = 'list'>
 	
@@ -61,3 +64,4 @@
 </div>
 
 {% endblock %}
+</div>

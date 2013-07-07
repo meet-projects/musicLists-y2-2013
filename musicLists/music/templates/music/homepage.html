@@ -1,16 +1,15 @@
 {% extends 'music/base.html' %}
 
-<<<<<<< HEAD
-=======
+
 {% block headers %}
-<link rel="stylesheet" type="text/css" href="profile.css">
-<link rel="stylesheet" type="text/css" href="homepage.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/profile.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/homepage.css">
 
 {% endblock %}
 
 <html>
 
-
+<body background="{{ STATIC_URL }}images/profile_background.jpg">
 <span>
 <form action="/profile/" method="post">
 {% csrf_token %}
@@ -30,7 +29,6 @@
 </span>
 <p>
 
->>>>>>> 17e0bd3e34f5e63711cca530ac21d11a418e1c93
 
 {% block content %}
 

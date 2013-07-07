@@ -146,7 +146,7 @@ def addalbum(request):
 		album=Album(name=album_name, artist=artist)
 		album.save()
 		album.genres.add()
-		akbum.save()
+		album.save()
 		
 	else:
 		album = album[0]
