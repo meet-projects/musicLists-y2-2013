@@ -11,7 +11,7 @@
 	<div>
 <img src="{{STATIC_URL}}images/images.jpeg" width="130" height="150"  alt="profilepic"/>
 	</div>
-<body background="{{ STATIC_URL }}images/profile_background.jpg">
+<body background="{{ STATIC_URL }}images/music-equalizer-background.jpg">
 <br>
 <br>
 <br>
@@ -31,13 +31,12 @@
 </div>
 
 <br>
-<form action="/makepost/" method="post">
-		{% csrf_token %}
+
 	<div id="profile">
 	<table id = "profile" border="1" >
+	<br>
 	<textarea id="u_jsonp_4_d" class="uiTextareaAutogrow input autofocus mentionsTextarea textInput DOMControl_placeholder" onkeydown="window.Bootloader && Bootloader.loadComponents(["control-textarea"], function() { TextAreaControl.getInstance(this) }.bind(this)); " aria-owns="js_12" aria-expanded="false" autocomplete="off" aria-autocomplete="list" role="textbox" placeholder="Share your taste" name="xhpc_message_text" title="Share your taste" aria-label="Share your taste " aria-haspopup="true"></textarea>
 <button class="_42ft _42fu _11b selected _42g-" type="submit" value="1">Post	</button> </table></div>
-</form>
 
 	<br><br><br><br><br>
 
@@ -59,6 +58,8 @@
 	<ul id = 'list'>
 {% for artist in user.guy.favartists.all %}
 		<li> {{artist.name}} 
+<br>
+<br>
 	</li>  
 	{% endfor %}
 <br>
