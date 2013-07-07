@@ -1,7 +1,7 @@
 body
 {
-background-image:url('../images/music-equalizer-background.jpg');
+background-image:url('../images/cute-twitter-backgrounds.jpg');
 background-repeat:no-repeat;
 color:white;
-text-indent: 50px;
+
 } 
