@@ -6,4 +6,18 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+<<<<<<< HEAD
+
+input[type=submit] {
+  color: black;
+  background-color: #66CC66;
+  border-radius: 8px;
+}
+
+
+
+
+
+=======
 </style>
+>>>>>>> a5e84e701a56d8ef7dc95840ca8726bd72aeb978
