@@ -11,7 +11,7 @@
 	</head>
 
 		<body>
-		<span>
+		<span id = "profile">
 		<form action="/profile/" method="post">
 		{% csrf_token %}
 			<input id = "test" type="submit" value="Profile"/>
@@ -23,17 +23,19 @@
 		<form action="/homepage/" method="post">
 		{% csrf_token %}
 			<input type="submit" value="home page"/>
-
+		</form>
 		<form action="/showaddartist/" method="post">
 		{% csrf_token %}
 			<input type="submit" value="Add Artist"/>
 		</form>
+		<form>
 			<input type="submit" value="friends"/>
 			<input type="submit" value="Albums"/>
 			<input type="submit" value="Singers"/>
 			<input type="submit" value="categories"/>
 			<input type="submit" value="News"/>
 			<input type="submit" value="Top Music"/>
+		</form>
 		<form action="/logout/" method="post">
 		{% csrf_token %}
 			<input type="submit" value="logout"/>

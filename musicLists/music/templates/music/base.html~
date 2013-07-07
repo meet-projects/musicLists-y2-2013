@@ -3,7 +3,7 @@
 
 		<title>{% block title %}{% endblock %}</title>
 
-		//<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/base.css">\\
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/base.css">
    		{% block headers %}
 
    		{% endblock %}
@@ -23,17 +23,19 @@
 		<form action="/homepage/" method="post">
 		{% csrf_token %}
 			<input type="submit" value="home page"/>
-
+		</form>
 		<form action="/showaddartist/" method="post">
 		{% csrf_token %}
 			<input type="submit" value="Add Artist"/>
 		</form>
+		<form>
 			<input type="submit" value="friends"/>
 			<input type="submit" value="Albums"/>
 			<input type="submit" value="Singers"/>
 			<input type="submit" value="categories"/>
 			<input type="submit" value="News"/>
 			<input type="submit" value="Top Music"/>
+		</form>
 		<form action="/logout/" method="post">
 		{% csrf_token %}
 			<input type="submit" value="logout"/>

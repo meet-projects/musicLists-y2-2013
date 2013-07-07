@@ -5,7 +5,7 @@
 h1{
 font-weight:bold;
 font-size:40px;
-color: #167866;
+color: #33CC66;
 }
 
 #profile{display: inline-block;}
@@ -55,4 +55,13 @@ background-repeat:no-repeat;
 background-attachment: fixed }
 
 #lolo{color:white ;}
+
+h1{
+
+font-family:"Comic Sans MS";
+}
+
+p{
+font-family:"Comic Sans MS"; 
+}
 
